@@ -1,0 +1,96 @@
+{
+  "destination": "Goa",
+  "duration": 5,
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival and North Goa Beaches",
+      "activities": [
+        { "time": "10:00 AM", "activity": "Check-in to hotel", "location": "Calangute" },
+        { "time": "12:00 PM", "activity": "Lunch at beach shack", "location": "Baga Beach" },
+        { "time": "2:00 PM", "activity": "Relax at Baga Beach", "location": "Baga Beach" },
+        { "time": "6:00 PM", "activity": "Sunset at Anjuna Beach", "location": "Anjuna" },
+        { "time": "8:00 PM", "activity": "Dinner at Tito's", "location": "Baga" }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Water Sports and Fort Aguada",
+      "activities": [
+        { "time": "9:00 AM", "activity": "Breakfast at hotel", "location": "Hotel" },
+        { "time": "10:30 AM", "activity": "Water sports (parasailing, jet ski)", "location": "Calangute Beach" },
+        { "time": "1:00 PM", "activity": "Lunch at local restaurant", "location": "Candolim" },
+        { "time": "3:00 PM", "activity": "Visit Fort Aguada", "location": "Aguada" },
+        { "time": "6:00 PM", "activity": "Visit Aguada Lighthouse", "location": "Aguada" },
+        { "time": "8:00 PM", "activity": "Dinner at Fisherman's Wharf", "location": "Candolim" }
+      ]
+    },
+    {
+      "day": 3,
+      "title": "South Goa Exploration",
+      "activities": [
+        { "time": "8:00 AM", "activity": "Early breakfast", "location": "Hotel" },
+        { "time": "9:30 AM", "activity": "Visit Colva Beach", "location": "Colva" },
+        { "time": "11:30 AM", "activity": "Explore Palolem Beach", "location": "Palolem" },
+        { "time": "1:00 PM", "activity": "Seafood lunch", "location": "Palolem" },
+        { "time": "3:00 PM", "activity": "Visit Cabo de Rama Fort", "location": "South Goa" },
+        { "time": "6:00 PM", "activity": "Sunset at Agonda Beach", "location": "Agonda" },
+        { "time": "8:30 PM", "activity": "Dinner at Martin's Corner", "location": "Betalbatim" }
+      ]
+    },
+    {
+      "day": 4,
+      "title": "Old Goa Heritage Tour",
+      "activities": [
+        { "time": "9:00 AM", "activity": "Breakfast", "location": "Hotel" },
+        { "time": "10:30 AM", "activity": "Visit Basilica of Bom Jesus", "location": "Old Goa" },
+        { "time": "12:00 PM", "activity": "Se Cathedral visit", "location": "Old Goa" },
+        { "time": "1:30 PM", "activity": "Goan lunch", "location": "Panjim" },
+        { "time": "3:00 PM", "activity": "Walk through Fontainhas (Latin Quarter)", "location": "Panjim" },
+        { "time": "5:00 PM", "activity": "Miramar Beach visit", "location": "Panjim" },
+        { "time": "8:00 PM", "activity": "Dinner cruise on Mandovi River", "location": "Panjim" }
+      ]
+    },
+    {
+      "day": 5,
+      "title": "Leisure and Departure",
+      "activities": [
+        { "time": "9:00 AM", "activity": "Leisurely breakfast", "location": "Hotel" },
+        { "time": "11:00 AM", "activity": "Last-minute shopping at Mapusa Market", "location": "Mapusa" },
+        { "time": "1:00 PM", "activity": "Lunch at Souza Lobo", "location": "Calangute" },
+        { "time": "3:00 PM", "activity": "Check-out and depart", "location": "Hotel" }
+      ]
+    }
+  ],
+  "foodItinerary": [
+    { "meal": "Breakfast", "recommendation": "Try Poi bread with Goan sausages" },
+    { "meal": "Lunch", "recommendation": "Fish curry rice, Prawn balchão, Chicken cafreal" },
+    { "meal": "Snacks", "recommendation": "Bebinca (dessert), Ros omelette, Fish cutlets" },
+    { "meal": "Dinner", "recommendation": "Goan thali, Crab xec xec, Sorpotel" }
+  ],
+  "famousPlaces": [
+    "Dudhsagar Falls",
+    "Spice Plantations",
+    "Butterfly Beach",
+    "Chapora Fort (Dil Chahta Hai fort)",
+    "Saturday Night Market (Arpora)"
+  ],
+  "dosAndDonts": {
+    "dos": [
+      "Respect local culture and traditions",
+      "Try local Goan cuisine",
+      "Bargain at local markets",
+      "Carry sunscreen and stay hydrated",
+      "Book water sports with licensed operators",
+      "Visit churches with modest clothing"
+    ],
+    "donts": [
+      "Don't drink and drive",
+      "Avoid swimming in rough waters or at night",
+      "Don't litter on beaches",
+      "Avoid photography inside churches without permission",
+      "Don't venture into isolated areas alone at night",
+      "Avoid drugs - strict penalties apply"
+    ]
+  }
+}

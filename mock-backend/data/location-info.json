@@ -1,0 +1,34 @@
+{
+  "funFacts": [
+    "This city is known as the financial capital of India",
+    "Home to Bollywood, the world's largest film industry",
+    "The city has a unique mix of colonial and modern architecture",
+    "Local street food is famous worldwide",
+    "One of the most densely populated cities in the world"
+  ],
+  "famousFoods": [
+    { "name": "Vada Pav", "description": "Spicy potato fritter in a bun", "type": "veg" },
+    { "name": "Pav Bhaji", "description": "Vegetable curry with bread", "type": "veg" },
+    { "name": "Bhel Puri", "description": "Puffed rice snack with chutneys", "type": "veg" },
+    { "name": "Bombay Duck", "description": "Local fish delicacy", "type": "non-veg" },
+    { "name": "Keema Pav", "description": "Minced meat with bread", "type": "non-veg" }
+  ],
+  "famousPlaces": [
+    { "name": "Gateway of India", "description": "Iconic monument overlooking the Arabian Sea", "category": "Historical" },
+    { "name": "Marine Drive", "description": "Scenic promenade along the coast", "category": "Scenic" },
+    { "name": "Elephanta Caves", "description": "Ancient rock-cut temples", "category": "Historical" },
+    { "name": "Chhatrapati Shivaji Terminus", "description": "UNESCO World Heritage railway station", "category": "Architecture" },
+    { "name": "Juhu Beach", "description": "Popular beach with food stalls", "category": "Beach" }
+  ],
+  "weather": {
+    "temperature": 28,
+    "unit": "C",
+    "condition": "Partly Cloudy",
+    "humidity": 75,
+    "windSpeed": 15
+  },
+  "aqi": 156,
+  "aqiCategory": "Moderate",
+  "civicMetric": 3.5,
+  "civicDescription": "Moderate cleanliness and infrastructure"
+}
