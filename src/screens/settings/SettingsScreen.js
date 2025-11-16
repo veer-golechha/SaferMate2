@@ -210,10 +210,13 @@ const SettingsScreen = ({ navigation }) => {
         }
       };
 
+      console.log('Saving user data with profileImage:', profileImage);
+
       // Update via API
       const response = await ApiService.updateProfile(userData);
       
       if (response.success) {
+        console.log('API response user:', response.user);
         // Save updated data locally
         await StorageService.saveUserData(response.user);
         await StorageService.savePreferences(response.user.preferences);

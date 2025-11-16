@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Alert,
+  Image,
 } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { COLORS } from '../../constants/colors';
@@ -15,6 +16,7 @@ import StorageService from '../../services/storage';
 const HomeScreen = ({ navigation }) => {
   const [userName, setUserName] = useState('User');
   const [greeting, setGreeting] = useState('Hello');
+  const [profileImage, setProfileImage] = useState(null);
 
   useEffect(() => {
     setGreeting(getGreeting());
@@ -29,8 +31,13 @@ const HomeScreen = ({ navigation }) => {
   const loadUserData = async () => {
     try {
       const userData = await StorageService.getUserData();
-      if (userData && userData.name) {
-        setUserName(userData.name);
+      if (userData) {
+        if (userData.name) {
+          setUserName(userData.name);
+        }
+        if (userData.profileImage) {
+          setProfileImage(userData.profileImage);
+        }
       }
     } catch (error) {
       console.error('Error loading user data:', error);
@@ -42,7 +49,11 @@ const HomeScreen = ({ navigation }) => {
   };
 
   const handleQuickAction = (action) => {
-    Alert.alert(action.title, `${action.title} screen coming soon!`);
+    if (action.id === 'explore') {
+      navigation.navigate('ExploreInput');
+    } else {
+      Alert.alert(action.title, `${action.title} screen coming soon!`);
+    }
   };
 
   return (
@@ -58,7 +69,11 @@ const HomeScreen = ({ navigation }) => {
           style={styles.profileButton}
           onPress={handleProfilePress}
         >
-          <Text style={styles.profileIcon}>👤</Text>
+          {profileImage ? (
+            <Image source={{ uri: profileImage }} style={styles.profileImage} />
+          ) : (
+            <Text style={styles.profileIcon}>👤</Text>
+          )}
         </TouchableOpacity>
       </View>
 
@@ -121,6 +136,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  profileImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
   },
   profileIcon: {
     fontSize: 28,

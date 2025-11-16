@@ -7,6 +7,8 @@ import LoginScreen from '../screens/auth/LoginScreen';
 import SignupScreen from '../screens/auth/SignupScreen';
 import OnboardingScreen from '../screens/onboarding/OnboardingScreen';
 import SettingsScreen from '../screens/settings/SettingsScreen';
+import ExploreInputScreen from '../screens/explore/ExploreInputScreen';
+import ExploreResultScreen from '../screens/explore/ExploreResultScreen';
 import MainTabs from './MainTabs';
 
 const Stack = createStackNavigator();
@@ -43,6 +45,16 @@ const AppNavigator = () => {
         <Stack.Screen 
           name="Settings" 
           component={SettingsScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="ExploreInput" 
+          component={ExploreInputScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="ExploreResult" 
+          component={ExploreResultScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

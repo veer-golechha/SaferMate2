@@ -7,18 +7,18 @@
     "One of the most densely populated cities in the world"
   ],
   "famousFoods": [
-    { "name": "Vada Pav", "description": "Spicy potato fritter in a bun", "type": "veg" },
-    { "name": "Pav Bhaji", "description": "Vegetable curry with bread", "type": "veg" },
-    { "name": "Bhel Puri", "description": "Puffed rice snack with chutneys", "type": "veg" },
-    { "name": "Bombay Duck", "description": "Local fish delicacy", "type": "non-veg" },
-    { "name": "Keema Pav", "description": "Minced meat with bread", "type": "non-veg" }
+    "Vada Pav - Spicy potato fritter in a bun",
+    "Pav Bhaji - Vegetable curry with bread",
+    "Bhel Puri - Puffed rice snack with chutneys",
+    "Bombay Duck - Local fish delicacy",
+    "Keema Pav - Minced meat with bread"
   ],
   "famousPlaces": [
-    { "name": "Gateway of India", "description": "Iconic monument overlooking the Arabian Sea", "category": "Historical" },
-    { "name": "Marine Drive", "description": "Scenic promenade along the coast", "category": "Scenic" },
-    { "name": "Elephanta Caves", "description": "Ancient rock-cut temples", "category": "Historical" },
-    { "name": "Chhatrapati Shivaji Terminus", "description": "UNESCO World Heritage railway station", "category": "Architecture" },
-    { "name": "Juhu Beach", "description": "Popular beach with food stalls", "category": "Beach" }
+    "Gateway of India - Iconic monument overlooking the Arabian Sea",
+    "Marine Drive - Scenic promenade along the coast",
+    "Elephanta Caves - Ancient rock-cut temples",
+    "Chhatrapati Shivaji Terminus - UNESCO World Heritage railway station",
+    "Juhu Beach - Popular beach with food stalls"
   ],
   "weather": {
     "temperature": 28,
