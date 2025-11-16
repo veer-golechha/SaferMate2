@@ -11,12 +11,14 @@
     "backend:dev": "nodemon mock-backend/server.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@react-native-async-storage/async-storage": "1.23.1",
     "@react-native-picker/picker": "^2.11.4",
     "@react-navigation/bottom-tabs": "^6.6.1",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/stack": "^6.4.1",
     "axios": "^1.7.7",
+    "dotenv": "^17.2.3",
     "expo": "~51.0.28",
     "expo-camera": "~15.0.16",
     "expo-constants": "^18.0.10",

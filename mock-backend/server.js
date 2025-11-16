@@ -3,9 +3,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const geminiService = require('./services/gemini');
 
 const app = express();
 const PORT = 3000;
+
+// Initialize Gemini
+const geminiConfigured = geminiService.initializeGemini();
 
 // Middleware
 app.use(cors());
@@ -119,16 +123,40 @@ app.put('/auth/profile', (req, res) => {
 });
 
 // Location/Explore endpoint
-app.get('/location/info', (req, res) => {
+app.get('/location/info', async (req, res) => {
   const { query } = req.query;
-  const locationData = loadMockData('location-info.json');
   
-  // Return mock data for any query
-  res.json({
-    success: true,
-    destination: query || 'Mumbai',
-    data: locationData
-  });
+  if (!query) {
+    return res.status(400).json({ error: 'Destination query is required' });
+  }
+  
+  try {
+    let data;
+    
+    // Use Gemini if configured, otherwise use mock data
+    if (geminiService.isGeminiConfigured()) {
+      console.log(`Fetching location info for "${query}" from Gemini...`);
+      data = await geminiService.getLocationInfo(query);
+    } else {
+      console.log(`Using mock data for "${query}"`);
+      data = loadMockData('location-info.json');
+    }
+    
+    res.json({
+      success: true,
+      destination: query,
+      data: data
+    });
+  } catch (error) {
+    console.error('Location info error:', error);
+    
+    // Return error response instead of falling back to mock data
+    res.status(503).json({
+      success: false,
+      error: 'Difficulty getting current data for the location. Please try later.',
+      destination: query
+    });
+  }
 });
 
 // Trip planner endpoint

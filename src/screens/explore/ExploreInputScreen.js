@@ -8,6 +8,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
+  Alert,
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
 import ApiService from '../../services/api';
@@ -30,9 +31,21 @@ const ExploreInputScreen = ({ navigation }) => {
           destination: response.destination,
           data: response.data,
         });
+      } else {
+        // Show error message from backend
+        Alert.alert(
+          'Unable to Load Data',
+          response.error || 'Difficulty getting current data for the location. Please try later.',
+          [{ text: 'OK' }]
+        );
       }
     } catch (error) {
       console.error('Explore error:', error);
+      Alert.alert(
+        'Unable to Load Data',
+        'Difficulty getting current data for the location. Please try later.',
+        [{ text: 'OK' }]
+      );
     } finally {
       setLoading(false);
     }

@@ -1,0 +1,66 @@
+{
+  "indore": {
+    "data": {
+      "funFacts": [
+        "Indore has consistently been ranked as India's cleanest city in the 'Swachh Survekshan' awards for multiple consecutive years.",
+        "It is the only city in India that houses both an Indian Institute of Technology (IIT Indore) and an Indian Institute of Management (IIM Indore).",
+        "Indore is widely regarded as the 'Food Capital' of Madhya Pradesh, famous for its unique and diverse street food culture.",
+        "The city was the capital of the Holkar dynasty, and its rich history is reflected in its grand palaces and architectural marvels.",
+        "Sarafa Bazaar, a bustling night market, uniquely transforms from a jewelry market by day into a vibrant street food hub by night."
+      ],
+      "famousFoods": [
+        "Poha-Jalebi - A quintessential Indori breakfast featuring flattened rice (poha) tempered with spices, often topped with sev and served with sweet, crispy jalebi.",
+        "Dal Bafla - A local delicacy consisting of baked wheat balls (bafla) served with a rich lentil curry (dal), generous ghee, and often a spicy chutney.",
+        "Bhutte ka Kees - A unique street food made from grated corn cooked with milk, spices, and mustard seeds, offering a creamy and savory flavor.",
+        "Garadu - A seasonal street snack made from deep-fried chunks of yam (garadu), tossed in a special blend of spices and lemon juice.",
+        "Kopra Patties - Crispy potato patties with a sweet and savory filling of grated coconut, green chilies, and spices, deep-fried to perfection."
+      ],
+      "famousPlaces": [
+        "Rajwada Palace - A magnificent seven-story palace that blends Maratha, Mughal, and French architectural styles, serving as a historical landmark of the Holkar dynasty.",
+        "Kanch Mandir - An exquisite Jain temple entirely adorned with intricate glasswork, mirrors, and mosaic panels, creating a dazzling visual experience.",
+        "Lal Bagh Palace - A grand European-style palace built by the Holkar rulers, featuring opulent interiors, a beautiful rose garden, and a museum showcasing royal artifacts.",
+        "Sarafa Bazaar - A unique night food market that comes alive after sunset, offering an incredible array of Indori street food, sweets, and snacks.",
+        "Chappan Dukan - Literally '56 Shops,' this iconic food street is a paradise for food lovers, offering a wide variety of breakfast items, snacks, and sweets throughout the day."
+      ],
+      "weather": {
+        "temperature": 26,
+        "condition": "Tropical wet and dry climate with hot, dry summers and mild, pleasant winters."
+      },
+      "aqi": 90,
+      "civicMetric": 4.3
+    },
+    "timestamp": 1763300470312
+  },
+  "banglore": {
+    "data": {
+      "funFacts": [
+        "Bangalore is famously known as the 'Silicon Valley of India' due to its role as the nation's leading information technology exporter.",
+        "It is also called the 'Garden City of India' because of its numerous public parks and green spaces, such as Lal Bagh and Cubbon Park.",
+        "The city enjoys a relatively mild climate throughout the year, a pleasant contrast to many other Indian cities, thanks to its high elevation on the Deccan Plateau.",
+        "Bangalore is home to the highest number of IT companies in India, attracting a diverse, young, and skilled workforce from across the country.",
+        "The Bangalore Palace, a prominent landmark, is a stunning replica of Windsor Castle in England, showcasing unique Tudor-style architecture."
+      ],
+      "famousFoods": [
+        "Masala Dosa - A crispy, savory crepe made from fermented rice and lentil batter, typically filled with a spiced potato mixture and served with sambar and chutney.",
+        "Bisi Bele Bath - A flavorful and spicy rice-based dish cooked with lentils, mixed vegetables, and a special blend of spices, often served with boondi or potato chips.",
+        "Akki Roti - A healthy and popular flatbread made from rice flour, often mixed with finely chopped vegetables (like onions, carrots, dill) and spices, served with chutney.",
+        "Filter Coffee - A strong, sweet coffee made by brewing finely ground coffee powder with hot water in a traditional South Indian filter, then mixing it with milk and sugar.",
+        "Mangalore Buns - A unique sweet and fluffy fried bread made with ripe bananas, flour, and a hint of sweetness, often served for breakfast or as a snack with coconut chutney."
+      ],
+      "famousPlaces": [
+        "Lal Bagh Botanical Garden - A historic botanical garden spread over 240 acres, famous for its glasshouse, diverse plant species, and annual flower shows.",
+        "Cubbon Park - A sprawling green oasis in the heart of the city, offering walking paths, statues, and several government buildings and museums within its premises.",
+        "Bangalore Palace - A magnificent palace built in the Tudor style, resembling Windsor Castle, known for its opulent interiors, sprawling grounds, and historical significance.",
+        "Vidhana Soudha - An imposing granite building housing the state legislature and secretariat, renowned for its grand Dravidian architecture (exterior viewing is generally permitted).",
+        "ISKCON Temple Bangalore - A grand and serene temple dedicated to Lord Krishna, known for its beautiful architecture, spiritual ambiance, and cultural activities."
+      ],
+      "weather": {
+        "temperature": 24,
+        "condition": "Mild and pleasant, with distinct monsoon and dry seasons"
+      },
+      "aqi": 95,
+      "civicMetric": 3.8
+    },
+    "timestamp": 1763300774468
+  }
+}
