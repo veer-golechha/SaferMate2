@@ -6,7 +6,8 @@ import SplashScreen from '../screens/SplashScreen';
 import LoginScreen from '../screens/auth/LoginScreen';
 import SignupScreen from '../screens/auth/SignupScreen';
 import OnboardingScreen from '../screens/onboarding/OnboardingScreen';
-import HomeScreen from '../screens/home/HomeScreen';
+import SettingsScreen from '../screens/settings/SettingsScreen';
+import MainTabs from './MainTabs';
 
 const Stack = createStackNavigator();
 
@@ -36,7 +37,12 @@ const AppNavigator = () => {
         />
         <Stack.Screen 
           name="MainApp" 
-          component={HomeScreen}
+          component={MainTabs}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="Settings" 
+          component={SettingsScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

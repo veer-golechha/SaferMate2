@@ -29,7 +29,7 @@ let users = [
     age: 25,
     country: 'India',
     emergencyContacts: [
-      { name: 'Emergency Contact', phone: '9876543210' }
+      { id: 1, name: 'Emergency Contact', phone: '9876543210' }
     ],
     preferences: {
       foodType: 'veg',
@@ -88,6 +88,33 @@ app.post('/auth/login', (req, res) => {
     success: true,
     user,
     token
+  });
+});
+
+// Update user profile
+app.put('/auth/profile', (req, res) => {
+  const { userId, name, gender, age, country, profileImage, emergencyContacts, preferences } = req.body;
+  
+  const userIndex = users.findIndex(u => u.id === userId);
+  
+  if (userIndex === -1) {
+    return res.status(404).json({ error: 'User not found' });
+  }
+  
+  users[userIndex] = {
+    ...users[userIndex],
+    name,
+    gender,
+    age,
+    country,
+    profileImage,
+    emergencyContacts,
+    preferences
+  };
+  
+  res.json({
+    success: true,
+    user: users[userIndex]
   });
 });
 

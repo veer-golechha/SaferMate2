@@ -1,103 +1,162 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+  Alert,
+} from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 import { COLORS } from '../../constants/colors';
+import { QUICK_ACTIONS, getGreeting } from '../../constants/config';
 import StorageService from '../../services/storage';
 
 const HomeScreen = ({ navigation }) => {
-  const handleLogout = async () => {
-    Alert.alert(
-      'Logout',
-      'Are you sure you want to logout?',
-      [
-        {
-          text: 'Cancel',
-          style: 'cancel',
-        },
-        {
-          text: 'Logout',
-          onPress: async () => {
-            await StorageService.clearAll();
-            navigation.replace('Splash');
-          },
-          style: 'destructive',
-        },
-      ]
-    );
+  const [userName, setUserName] = useState('User');
+  const [greeting, setGreeting] = useState('Hello');
+
+  useEffect(() => {
+    setGreeting(getGreeting());
+  }, []);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      loadUserData();
+    }, [])
+  );
+
+  const loadUserData = async () => {
+    try {
+      const userData = await StorageService.getUserData();
+      if (userData && userData.name) {
+        setUserName(userData.name);
+      }
+    } catch (error) {
+      console.error('Error loading user data:', error);
+    }
+  };
+
+  const handleProfilePress = () => {
+    navigation.navigate('Settings');
+  };
+
+  const handleQuickAction = (action) => {
+    Alert.alert(action.title, `${action.title} screen coming soon!`);
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
+      {/* Header Section */}
       <View style={styles.header}>
-        <Text style={styles.emoji}>🏠</Text>
-        <Text style={styles.title}>HOME SCREEN</Text>
+        <View style={styles.greetingContainer}>
+          <Text style={styles.greeting}>{greeting}</Text>
+          <Text style={styles.userName}>{userName}</Text>
+        </View>
+        
+        <TouchableOpacity
+          style={styles.profileButton}
+          onPress={handleProfilePress}
+        >
+          <Text style={styles.profileIcon}>👤</Text>
+        </TouchableOpacity>
       </View>
-      <Text style={styles.text}>This is the Home Screen</Text>
-      <Text style={styles.subtext}>Main App (Placeholder)</Text>
-      <View style={styles.badge}>
-        <Text style={styles.badgeText}>User is logged in</Text>
+
+      {/* Quick Actions Grid */}
+      <View style={styles.quickActionsContainer}>
+        <Text style={styles.sectionTitle}>Quick Actions</Text>
+        
+        <View style={styles.grid}>
+          {QUICK_ACTIONS.map((action) => (
+            <TouchableOpacity
+              key={action.id}
+              style={[styles.actionTile, { backgroundColor: action.color }]}
+              onPress={() => handleQuickAction(action)}
+            >
+              <Text style={styles.actionIcon}>{action.icon}</Text>
+              <Text style={styles.actionTitle}>{action.title}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
       </View>
-      
-      <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
-        <Text style={styles.logoutButtonText}>Logout & Clear Token</Text>
-      </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
+    backgroundColor: COLORS.background,
+  },
+  scrollContent: {
+    paddingBottom: 40,
   },
   header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 30,
-  },
-  emoji: {
-    fontSize: 60,
-    marginBottom: 10,
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: COLORS.success,
-    letterSpacing: 2,
-  },
-  text: {
-    fontSize: 18,
-    color: COLORS.text,
-    marginBottom: 10,
-  },
-  subtext: {
-    fontSize: 14,
-    color: COLORS.textGray,
-    marginTop: 10,
-  },
-  badge: {
-    marginTop: 30,
     paddingHorizontal: 20,
-    paddingVertical: 10,
-    backgroundColor: COLORS.success,
-    borderRadius: 20,
+    paddingTop: 50,
+    paddingBottom: 20,
+    backgroundColor: COLORS.primary,
   },
-  badgeText: {
-    color: '#FFFFFF',
-    fontWeight: 'bold',
+  greetingContainer: {
+    flex: 1,
   },
-  logoutButton: {
-    marginTop: 30,
-    backgroundColor: COLORS.danger,
-    paddingHorizontal: 24,
-    paddingVertical: 14,
-    borderRadius: 12,
-  },
-  logoutButtonText: {
-    color: '#FFFFFF',
+  greeting: {
     fontSize: 16,
+    color: '#FFFFFF',
+    opacity: 0.9,
+  },
+  userName: {
+    fontSize: 24,
     fontWeight: 'bold',
+    color: '#FFFFFF',
+    marginTop: 4,
+  },
+  profileButton: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  profileIcon: {
+    fontSize: 28,
+  },
+  quickActionsContainer: {
+    padding: 20,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: COLORS.text,
+    marginBottom: 16,
+  },
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  actionTile: {
+    width: '48%',
+    aspectRatio: 1,
+    borderRadius: 16,
+    padding: 20,
+    marginBottom: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  actionIcon: {
+    fontSize: 48,
+    marginBottom: 12,
+  },
+  actionTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#FFFFFF',
+    textAlign: 'center',
   },
 });
 

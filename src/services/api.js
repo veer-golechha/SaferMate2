@@ -55,6 +55,10 @@ export const ApiService = {
     return await apiClient.post('/auth/login', credentials);
   },
 
+  updateProfile: async (userData) => {
+    return await apiClient.put('/auth/profile', userData);
+  },
+
   // Location/Explore endpoints
   getLocationInfo: async (destination) => {
     return await apiClient.get('/location/info', { params: { query: destination } });
