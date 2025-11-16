@@ -19,7 +19,25 @@ const loadMockData = (filename) => {
 };
 
 // Mock user database (in-memory for MVP)
-let users = [];
+let users = [
+  {
+    id: 1,
+    name: 'Test User',
+    email: 'test@test.com',
+    password: 'test123',
+    gender: 'male',
+    age: 25,
+    country: 'India',
+    emergencyContacts: [
+      { name: 'Emergency Contact', phone: '9876543210' }
+    ],
+    preferences: {
+      foodType: 'veg',
+      languages: ['English', 'Hindi']
+    },
+    createdAt: new Date().toISOString()
+  }
+];
 let reports = [];
 let reportIdCounter = 1;
 

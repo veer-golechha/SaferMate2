@@ -1,5 +1,27 @@
+import { Platform } from 'react-native';
+
 // API Configuration
-export const API_BASE_URL = 'http://localhost:3000';
+// For physical device, manually set your computer's IP
+// You can find it by running: ipconfig (Windows) or ifconfig (Mac/Linux)
+// Look for "IPv4 Address" under your WiFi adapter
+const COMPUTER_IP = '192.168.29.76'; // CHANGE THIS TO YOUR COMPUTER'S IP
+
+const getApiUrl = () => {
+  if (__DEV__) {
+    // If using physical device with Expo Go
+    if (Platform.OS === 'android' || Platform.OS === 'ios') {
+      return `http://${COMPUTER_IP}:3000`;
+    }
+  }
+  
+  // Fallback for emulator/web
+  return Platform.OS === 'android' 
+    ? 'http://192.168.29.76:3000'  // Android emulator
+    : 'http://192.168.29.76:3000'; // iOS simulator/web
+};
+
+export const API_BASE_URL = getApiUrl();
+console.log('API_BASE_URL:', API_BASE_URL); // Debug log
 
 // App Configuration
 export const APP_NAME = 'SafarMate';

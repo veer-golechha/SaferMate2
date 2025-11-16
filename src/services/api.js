@@ -88,3 +88,5 @@ export const ApiService = {
     return await apiClient.get('/health');
   },
 };
+
+export default ApiService;
