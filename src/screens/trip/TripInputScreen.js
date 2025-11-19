@@ -110,14 +110,16 @@ const TripInputScreen = ({ navigation }) => {
             data: {
               ...response.trip,
               budget: parseInt(budget),
+              persons: parseInt(persons),
               objective: objective.trim() || 'Leisure and sightseeing',
             },
           };
+          console.log('[TRIP-INPUT] Saving trip with persons:', parseInt(persons));
           const updatedTrips = [trip, ...existingTrips];
           await StorageService.saveTrips(updatedTrips);
-          console.log('Trip auto-saved to history');
+          console.log('[TRIP-INPUT] Trip auto-saved to history');
         } catch (saveError) {
-          console.error('Error auto-saving trip:', saveError);
+          console.error('[TRIP-INPUT] Error auto-saving trip:', saveError);
           // Don't block navigation if save fails
         }
         

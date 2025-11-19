@@ -26,11 +26,44 @@ const TripHistoryScreen = ({ navigation }) => {
     setLoading(true);
     try {
       const savedTrips = await StorageService.getTrips();
+      console.log('[TRIP-HISTORY] Raw trips loaded:', savedTrips?.length || 0);
+      
+      // Deduplicate trips based on destination, duration, budget, and persons
+      const uniqueTrips = [];
+      const tripKeys = new Set();
+      
+      (savedTrips || []).forEach(trip => {
+        // Create a unique key for each trip
+        const tripKey = `${trip.destination?.toLowerCase()}-${trip.duration}-${trip.data?.budget}-${trip.data?.persons}`;
+        
+        if (!tripKeys.has(tripKey)) {
+          tripKeys.add(tripKey);
+          uniqueTrips.push(trip);
+        } else {
+          console.log('[TRIP-HISTORY] Duplicate trip removed:', trip.destination);
+        }
+      });
+      
+      console.log('[TRIP-HISTORY] After deduplication:', uniqueTrips.length);
+      
       // Cap to last 30 trips
-      const limitedTrips = (savedTrips || []).slice(0, 30);
+      const limitedTrips = uniqueTrips.slice(0, 30);
+      
+      // Log first trip data for verification
+      if (limitedTrips.length > 0) {
+        console.log('[TRIP-HISTORY] Sample trip data:', {
+          destination: limitedTrips[0].destination,
+          duration: limitedTrips[0].duration,
+          budget: limitedTrips[0].data?.budget,
+          persons: limitedTrips[0].data?.persons,
+          objective: limitedTrips[0].data?.objective,
+          createdAt: limitedTrips[0].createdAt,
+        });
+      }
+      
       setTrips(limitedTrips);
     } catch (error) {
-      console.error('Error loading trips:', error);
+      console.error('[TRIP-HISTORY] Error loading trips:', error);
     } finally {
       setLoading(false);
     }
@@ -40,10 +73,19 @@ const TripHistoryScreen = ({ navigation }) => {
     navigation.navigate('TripResult', { tripData: trip.data });
   };
 
-  const handleDeleteTrip = (tripId) => {
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-IN', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+    });
+  };
+
+  const handleLongPress = (tripId, destination) => {
     Alert.alert(
       'Delete Trip',
-      'Are you sure you want to delete this trip?',
+      `Do you want to delete this trip to ${destination}?`,
       [
         { text: 'Cancel', style: 'cancel' },
         {
@@ -64,65 +106,82 @@ const TripHistoryScreen = ({ navigation }) => {
     );
   };
 
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-IN', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
+  const renderTripItem = ({ item }) => {
+    // Log rendering data for verification
+    console.log('[TRIP-HISTORY] Rendering card:', {
+      id: item.id,
+      destination: item.destination,
+      duration: item.duration,
+      budget: item.data?.budget,
+      persons: item.data?.persons,
+      objective: item.data?.objective,
     });
-  };
-
-  const renderTripItem = ({ item }) => (
-    <TouchableOpacity
-      style={styles.tripCard}
-      onPress={() => handleTripPress(item)}
-    >
-      <View style={styles.tripCardContent}>
-        <View style={styles.tripHeader}>
-          <View style={styles.destinationRow}>
-            <Text style={styles.destination}>{item.destination}</Text>
-            {item.data?.objective && (
-              <View style={styles.objectiveBadge}>
-                <Text style={styles.objectiveBadgeText}>
-                  {item.data.objective}
-                </Text>
-              </View>
-            )}
-          </View>
-          <TouchableOpacity
-            style={styles.deleteButton}
-            onPress={() => handleDeleteTrip(item.id)}
-          >
-            <Text style={styles.deleteButtonText}>×</Text>
-          </TouchableOpacity>
-        </View>
-        
-        <View style={styles.tripDetails}>
-          <View style={styles.detailItem}>
-            <Text style={styles.detailIcon}>📅</Text>
-            <Text style={styles.detailText}>
-              {item.duration} {item.duration === 1 ? 'Day' : 'Days'}
+    
+    return (
+      <TouchableOpacity
+        style={styles.tripCard}
+        onPress={() => handleTripPress(item)}
+        onLongPress={() => handleLongPress(item.id, item.destination)}
+        activeOpacity={0.7}
+      >
+        {/* Header with destination and date badge */}
+        <View style={styles.cardHeader}>
+          <View style={styles.destinationContainer}>
+            <Text style={styles.locationIcon}>📍</Text>
+            <Text style={styles.destination} numberOfLines={1} ellipsizeMode="tail">
+              {item.destination || 'Unknown'}
             </Text>
           </View>
-          
-          <View style={styles.detailItem}>
-            <Text style={styles.detailIcon}>💰</Text>
-            <Text style={styles.detailText}>₹{item.data?.budget || 'N/A'}</Text>
-          </View>
-          
-          <View style={styles.detailItem}>
-            <Text style={styles.detailIcon}>🕒</Text>
-            <Text style={styles.detailText}>{formatDate(item.createdAt)}</Text>
+          <View style={styles.dateBadge}>
+            <Text style={styles.dateBadgeText}>
+              {formatDate(item.createdAt)}
+            </Text>
           </View>
         </View>
         
-        <View style={styles.viewButton}>
-          <Text style={styles.viewButtonText}>View Itinerary →</Text>
+        {/* Trip details in grid layout */}
+        <View style={styles.detailsGrid}>
+          <View style={styles.detailCard}>
+            <Text style={styles.detailIcon}>📅</Text>
+            <Text style={styles.detailValue}>{item.duration || 0}</Text>
+            <Text style={styles.detailLabel}>days</Text>
+          </View>
+          
+          <View style={styles.detailCard}>
+            <Text style={styles.detailIcon}>💰</Text>
+            <Text style={styles.detailValue} numberOfLines={1} adjustsFontSizeToFit>
+              {item.data?.budget ? `₹${item.data.budget.toLocaleString()}` : 'N/A'}
+            </Text>
+            <Text style={styles.detailLabel}>budget</Text>
+          </View>
+          
+          <View style={styles.detailCard}>
+            <Text style={styles.detailIcon}>👥</Text>
+            <Text style={styles.detailValue}>{item.data?.persons || 1}</Text>
+            <Text style={styles.detailLabel}>
+              {(item.data?.persons || 1) === 1 ? 'person' : 'people'}
+            </Text>
+          </View>
         </View>
-      </View>
-    </TouchableOpacity>
-  );
+        
+        {/* Objective tag - only show if present */}
+        {item.data?.objective && (
+          <View style={styles.metaInfo}>
+            <View style={styles.objectiveTag}>
+              <Text style={styles.tagText} numberOfLines={1} ellipsizeMode="tail">
+                🎯 {item.data.objective}
+              </Text>
+            </View>
+          </View>
+        )}
+        
+        {/* View details indicator */}
+        <View style={styles.viewDetailsContainer}>
+          <Text style={styles.viewDetailsText}>View itinerary →</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  };
 
   const renderEmptyState = () => (
     <View style={styles.emptyContainer}>
@@ -172,116 +231,149 @@ const TripHistoryScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    backgroundColor: '#F5F7FA',
   },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.background,
+    backgroundColor: '#F5F7FA',
   },
   header: {
     paddingHorizontal: 20,
     paddingTop: 50,
     paddingBottom: 20,
     backgroundColor: COLORS.primary,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
+    elevation: 8,
   },
   headerTitle: {
     fontSize: 28,
     fontWeight: 'bold',
     color: '#FFFFFF',
+    marginBottom: 4,
   },
   headerSubtitle: {
     fontSize: 14,
     color: '#FFFFFF',
     opacity: 0.9,
-    marginTop: 4,
   },
   listContainer: {
-    padding: 20,
+    padding: 16,
     paddingBottom: 40,
   },
   tripCard: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 12,
-    marginBottom: 16,
-    borderWidth: 1,
-    borderColor: COLORS.borderLight,
+    borderRadius: 16,
+    marginBottom: 14,
     overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: '#E8E8E8',
   },
-  tripCardContent: {
-    padding: 16,
-  },
-  tripHeader: {
+  cardHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    marginBottom: 12,
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingTop: 14,
+    paddingBottom: 12,
+    backgroundColor: '#FAFBFC',
   },
-  destinationRow: {
+  destinationContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
     flex: 1,
-    flexDirection: 'column',
+    marginRight: 8,
+  },
+  locationIcon: {
+    fontSize: 20,
+    marginRight: 8,
   },
   destination: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     color: COLORS.text,
-    marginBottom: 6,
+    flex: 1,
   },
-  objectiveBadge: {
-    backgroundColor: COLORS.primaryLight,
+  dateBadge: {
+    backgroundColor: COLORS.primary,
     paddingHorizontal: 10,
     paddingVertical: 4,
-    borderRadius: 12,
-    alignSelf: 'flex-start',
+    borderRadius: 10,
   },
-  objectiveBadgeText: {
-    fontSize: 11,
-    color: COLORS.primary,
+  dateBadgeText: {
+    fontSize: 10,
     fontWeight: '600',
-    textTransform: 'capitalize',
-  },
-  deleteButton: {
-    width: 28,
-    height: 28,
-    borderRadius: 14,
-    backgroundColor: COLORS.danger,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: 12,
-  },
-  deleteButtonText: {
     color: '#FFFFFF',
-    fontSize: 20,
-    fontWeight: 'bold',
-    lineHeight: 22,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
-  tripDetails: {
+  detailsGrid: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    marginBottom: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 14,
+    gap: 8,
   },
-  detailItem: {
-    flexDirection: 'row',
+  detailCard: {
+    flex: 1,
     alignItems: 'center',
-    marginRight: 16,
-    marginBottom: 4,
+    backgroundColor: '#F8F9FA',
+    borderRadius: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 8,
+    borderWidth: 1,
+    borderColor: '#E9ECEF',
   },
   detailIcon: {
-    fontSize: 14,
-    marginRight: 6,
+    fontSize: 18,
+    marginBottom: 4,
   },
-  detailText: {
-    fontSize: 14,
-    color: COLORS.textLight,
+  detailValue: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: COLORS.primary,
+    marginBottom: 2,
   },
-  viewButton: {
-    paddingTop: 12,
+  detailLabel: {
+    fontSize: 11,
+    color: COLORS.textGray,
+    fontWeight: '500',
+  },
+  metaInfo: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    paddingHorizontal: 16,
+    paddingBottom: 12,
+    gap: 6,
+  },
+  objectiveTag: {
+    backgroundColor: '#FFF4E6',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: '#FFD699',
+    maxWidth: '100%',
+  },
+  tagText: {
+    fontSize: 12,
+    color: COLORS.text,
+    fontWeight: '500',
+  },
+  viewDetailsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 10,
     borderTopWidth: 1,
-    borderTopColor: COLORS.borderLight,
+    borderTopColor: '#F0F0F0',
+    backgroundColor: '#FAFBFC',
   },
-  viewButtonText: {
-    fontSize: 15,
+  viewDetailsText: {
+    fontSize: 13,
     color: COLORS.primary,
     fontWeight: '600',
   },
