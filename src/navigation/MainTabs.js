@@ -6,6 +6,7 @@ import { COLORS } from '../constants/colors';
 import HomeScreen from '../screens/home/HomeScreen';
 import TripHistoryScreen from '../screens/trips/TripHistoryScreen';
 import EmergencyScreen from '../screens/emergency/EmergencyScreen';
+import CivicDashboardScreen from '../screens/civic/CivicDashboardScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -42,6 +43,15 @@ const MainTabs = () => {
         options={{
           tabBarIcon: ({ color, size }) => (
             <Text style={{ fontSize: 24 }}>✈️</Text>
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Civic"
+        component={CivicDashboardScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Text style={{ fontSize: 24 }}>📝</Text>
           ),
         }}
       />

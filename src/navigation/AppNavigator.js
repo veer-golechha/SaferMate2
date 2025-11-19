@@ -11,6 +11,9 @@ import ExploreInputScreen from '../screens/explore/ExploreInputScreen';
 import ExploreResultScreen from '../screens/explore/ExploreResultScreen';
 import TripInputScreen from '../screens/trip/TripInputScreen';
 import TripResultScreen from '../screens/trip/TripResultScreen';
+import CivicDashboardScreen from '../screens/civic/CivicDashboardScreen';
+import CivicReportScreen from '../screens/civic/CivicReportScreen';
+import CivicTrackScreen from '../screens/civic/CivicTrackScreen';
 import MainTabs from './MainTabs';
 
 const Stack = createStackNavigator();
@@ -67,6 +70,21 @@ const AppNavigator = () => {
         <Stack.Screen 
           name="TripResult" 
           component={TripResultScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="CivicDashboard" 
+          component={CivicDashboardScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="CivicReport" 
+          component={CivicReportScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="CivicTrack" 
+          component={CivicTrackScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

@@ -70,6 +70,10 @@ export const ApiService = {
   },
 
   // Civic dashboard endpoints
+  submitCivicReport: async (reportData) => {
+    return await apiClient.post('/report/submit', reportData);
+  },
+
   submitReport: async (reportData) => {
     return await apiClient.post('/report/submit', reportData);
   },
