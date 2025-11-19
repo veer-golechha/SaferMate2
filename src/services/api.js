@@ -4,7 +4,7 @@ import { API_BASE_URL } from '../constants/config';
 // Create axios instance
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 30000, // 30 seconds for AI-generated responses
+  timeout: 45000, // 45 seconds for AI-generated responses
   headers: {
     'Content-Type': 'application/json',
   },

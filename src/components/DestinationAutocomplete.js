@@ -73,26 +73,27 @@ const DestinationAutocomplete = ({
   const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
-    if (value && value.length >= 2) {
+    if (value && value.length >= 2 && isFocused) {
       const filtered = POPULAR_DESTINATIONS.filter(dest =>
         dest.toLowerCase().includes(value.toLowerCase())
       ).slice(0, 5); // Show max 5 suggestions
       setSuggestions(filtered);
-      setShowSuggestions(true);
+      setShowSuggestions(filtered.length > 0);
     } else {
       setSuggestions([]);
       setShowSuggestions(false);
     }
-  }, [value]);
+  }, [value, isFocused]);
 
   const handleSelect = (destination) => {
     onChangeText(destination);
+    setSuggestions([]);
     setShowSuggestions(false);
   };
 
   const handleFocus = () => {
     setIsFocused(true);
-    if (value.length >= 2) {
+    if (value.length >= 2 && suggestions.length > 0) {
       setShowSuggestions(true);
     }
   };
@@ -100,7 +101,9 @@ const DestinationAutocomplete = ({
   const handleBlur = () => {
     setIsFocused(false);
     // Delay hiding to allow tap on suggestion
-    setTimeout(() => setShowSuggestions(false), 200);
+    setTimeout(() => {
+      setShowSuggestions(false);
+    }, 200);
   };
 
   return (
@@ -180,6 +183,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.border,
     maxHeight: 200,
+    zIndex: 2000,
+    elevation: 10,
     ...Platform.select({
       ios: {
         shadowColor: '#000',
@@ -188,10 +193,9 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
       },
       android: {
-        elevation: 4,
+        elevation: 10,
       },
     }),
-    zIndex: 1001,
   },
   suggestionsList: {
     maxHeight: 200,

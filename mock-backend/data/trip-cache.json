@@ -793,5 +793,438 @@
       }
     },
     "timestamp": 1763578333385
+  },
+  "{\"destination\":\"indore\",\"duration\":2,\"budget\":10000,\"persons\":2,\"objective\":\"leisure and sightseeing\",\"foodType\":\"veg\"}": {
+    "data": {
+      "destination": "Indore",
+      "duration": 2,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Historical Marvels & Street Food Delights",
+          "activities": [
+            {
+              "time": "08:00 AM",
+              "activity": "Arrive in Indore, check into your budget-friendly hotel. Freshen up and get ready for the day.",
+              "location": "Hotel in Indore (e.g., near Railway Station or Palasia area)"
+            },
+            {
+              "time": "09:30 AM",
+              "activity": "Enjoy a classic Indori breakfast of Poha and Jalebi at a local eatery, a must-try combination.",
+              "location": "Local Eatery (e.g., Vijay Chaat House or any popular street vendor)"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "Explore the iconic Rajwada Palace, a magnificent seven-story historical palace blending Maratha, Mughal, and French architectural styles.",
+              "location": "Rajwada Palace"
+            },
+            {
+              "time": "12:00 PM",
+              "activity": "Visit the exquisite Kanch Mandir (Glass Temple), a Jain temple entirely made of glass and mirrors, showcasing intricate artwork.",
+              "location": "Kanch Mandir"
+            },
+            {
+              "time": "01:30 PM",
+              "activity": "Savor a delicious vegetarian lunch at a popular local restaurant, trying a traditional Thali or local specialties.",
+              "location": "Local Restaurant (e.g., Shreemaya Celebrity, Guru Kripa)"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "Discover the grandeur of Lal Bagh Palace, a magnificent palace reflecting European architectural styles, set amidst beautiful gardens.",
+              "location": "Lal Bagh Palace"
+            },
+            {
+              "time": "05:30 PM",
+              "activity": "Head to Chappan Dukan (56 Shops) for an evening of famous Indori street snacks like Bhutta ka Kees, Garadu, and Patties.",
+              "location": "Chappan Dukan"
+            },
+            {
+              "time": "07:30 PM",
+              "activity": "Experience the vibrant night food market of Sarafa Bazaar for dinner and dessert, trying Dahi Vada, Aloo Tikki, Sabudana Khichdi, and Malpua.",
+              "location": "Sarafa Bazaar"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Spiritual Serenity & Cultural Insights",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Start your day with a hearty breakfast, trying other local specialties like Samosa or Kachori.",
+              "location": "Local Eatery"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "Visit the beautiful Annapurna Temple, dedicated to the goddess Annapurna, known for its unique architecture.",
+              "location": "Annapurna Temple"
+            },
+            {
+              "time": "11:30 AM",
+              "activity": "Explore Gommatgiri, a serene Jain pilgrimage site featuring a 21-foot statue of Lord Bahubali and several small temples.",
+              "location": "Gommatgiri"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Enjoy a traditional vegetarian lunch, perhaps a Thali, at a local restaurant.",
+              "location": "Local Restaurant"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "Delve into the history and culture of Madhya Pradesh at the Central Museum, housing a rich collection of artifacts.",
+              "location": "Central Museum"
+            },
+            {
+              "time": "04:30 PM",
+              "activity": "Indulge in some souvenir shopping or explore local markets for Indori specialties like textiles, handicrafts, and famous namkeen.",
+              "location": "Local Markets (e.g., MT Cloth Market area, Kothari Market)"
+            },
+            {
+              "time": "06:00 PM",
+              "activity": "Have an early light dinner or grab some famous Indori namkeen for your journey.",
+              "location": "Local Eatery or Namkeen Shop"
+            },
+            {
+              "time": "07:00 PM",
+              "activity": "Depart from Indore with wonderful memories of its rich culture and delicious food.",
+              "location": "Indore Railway Station/Airport"
+            }
+          ]
+        }
+      ],
+      "foodItinerary": [
+        {
+          "meal": "Breakfast",
+          "recommendation": "Indori Poha with Jalebi, Samosa, Kachori, Usal Poha. Try popular spots like Vijay Chaat House or local street vendors for authentic taste."
+        },
+        {
+          "meal": "Lunch",
+          "recommendation": "Traditional Vegetarian Thali, Dal Bafla, Sabzi-Roti. Restaurants like Shreemaya Celebrity, Guru Kripa, or local Bhojanalayas offer great options."
+        },
+        {
+          "meal": "Dinner",
+          "recommendation": "Street food at Sarafa Bazaar (Dahi Vada, Aando ka Halwa, Bhutte ka Kees, Garadu, Sabudana Khichdi, Malpua, Jalebi, Kulfi). For a sit-down meal, explore other veg restaurants."
+        },
+        {
+          "meal": "Snacks",
+          "recommendation": "Chappan Dukan specialties (Bhutta ka Kees, Garadu, Patties, Hot Dog, various sweets), Indori Namkeen (Ratlam Sev, Ujjaini Sev) from local shops."
+        }
+      ],
+      "famousPlaces": [
+        "Rajwada Palace",
+        "Lal Bagh Palace",
+        "Kanch Mandir",
+        "Chappan Dukan",
+        "Sarafa Bazaar",
+        "Annapurna Temple",
+        "Gommatgiri",
+        "Central Museum",
+        "Krishnapura Chhatris"
+      ],
+      "dosAndDonts": {
+        "dos": [
+          "Do try the diverse street food, especially at Chappan Dukan and Sarafa Bazaar; it's a highlight of Indore.",
+          "Do carry sufficient cash for street food and local markets, though UPI is widely accepted.",
+          "Do use ride-sharing apps (Ola/Uber) or auto-rickshaws for convenient and budget-friendly local transport.",
+          "Do bargain politely when shopping in local markets for souvenirs and goods.",
+          "Do respect local customs and traditions, especially when visiting religious sites; dress modestly.",
+          "Do stay hydrated, especially during warmer months, by carrying a water bottle."
+        ],
+        "donts": [
+          "Don't litter; help keep the city clean and beautiful.",
+          "Don't visit Sarafa Bazaar too early; it truly comes alive after 8 PM and operates late into the night.",
+          "Don't forget to check the opening and closing times of attractions before visiting to avoid disappointment.",
+          "Don't hesitate to ask locals for directions or recommendations; they are generally helpful and friendly.",
+          "Don't overspend on accommodation; budget hotels are plentiful and good for a short stay within your budget.",
+          "Don't forget to try the famous Indori Namkeen and take some home as a souvenir."
+        ]
+      }
+    },
+    "timestamp": 1763578924469
+  },
+  "{\"destination\":\"guwahati\",\"duration\":2,\"budget\":65000,\"persons\":2,\"objective\":\"leisure and sightseeing\",\"foodType\":\"veg\"}": {
+    "data": {
+      "destination": "Guwahati",
+      "duration": 2,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Spiritual Serenity & Riverine Charm",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Arrive in Guwahati, check into your pre-booked hotel (e.g., Radisson Blu, Vivanta, Novotel for a comfortable stay within budget). Freshen up and relax.",
+              "location": "Hotel in Guwahati"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "Visit the revered Kamakhya Temple, one of the oldest of the 51 Shakti Peethas. Opt for a VIP Darshan for a quicker and more comfortable experience.",
+              "location": "Kamakhya Temple"
+            },
+            {
+              "time": "01:30 PM",
+              "activity": "Enjoy a delicious vegetarian lunch at a local restaurant near Kamakhya Temple or on the way back to the city center.",
+              "location": "Local Veg Restaurant"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "Take a short ferry ride across the Brahmaputra River to Umananda Temple, located on Peacock Island. It's the smallest inhabited river island in the world.",
+              "location": "Umananda Temple (Peacock Island)"
+            },
+            {
+              "time": "05:30 PM",
+              "activity": "Embark on a relaxing sunset cruise on the mighty Brahmaputra River. Enjoy the scenic views and the tranquil atmosphere.",
+              "location": "Brahmaputra River Cruise (e.g., Alfresco Grand)"
+            },
+            {
+              "time": "08:00 PM",
+              "activity": "Savor a delightful vegetarian dinner at a well-regarded restaurant offering North Indian or multi-cuisine options.",
+              "location": "Restaurant (e.g., The Dhaba, Kiranshree Portico)"
+            },
+            {
+              "time": "09:30 PM",
+              "activity": "Return to the hotel for a restful night.",
+              "location": "Hotel in Guwahati"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Cultural Exploration & Local Flavors",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Enjoy a hearty vegetarian breakfast at your hotel.",
+              "location": "Hotel in Guwahati"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "Explore the rich history and culture of Assam at the Assam State Museum, showcasing archaeological artifacts, sculptures, and tribal exhibits.",
+              "location": "Assam State Museum"
+            },
+            {
+              "time": "12:30 PM",
+              "activity": "Indulge in a traditional Assamese vegetarian thali for lunch, experiencing local flavors.",
+              "location": "Local Assamese Veg Restaurant"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "Visit Srimanta Sankaradeva Kalakshetra, a cultural institution showcasing the life and works of the great Vaishnava saint Srimanta Sankaradeva, along with Assamese art and culture.",
+              "location": "Srimanta Sankaradeva Kalakshetra"
+            },
+            {
+              "time": "05:00 PM",
+              "activity": "Seek tranquility at Basistha Ashram, a serene ashram nestled amidst lush greenery, believed to be the abode of Sage Basistha.",
+              "location": "Basistha Ashram"
+            },
+            {
+              "time": "07:00 PM",
+              "activity": "Explore Fancy Bazaar or Paltan Bazaar, popular local markets, for some souvenir shopping or to experience the local hustle and bustle.",
+              "location": "Fancy Bazaar / Paltan Bazaar"
+            },
+            {
+              "time": "08:30 PM",
+              "activity": "Enjoy a farewell vegetarian dinner at a restaurant of your choice, perhaps trying a different cuisine or revisiting a favorite.",
+              "location": "Restaurant (e.g., Paradise, JBs)"
+            },
+            {
+              "time": "10:00 PM",
+              "activity": "Return to the hotel, pack up, and prepare for departure.",
+              "location": "Hotel in Guwahati"
+            }
+          ]
+        }
+      ],
+      "foodItinerary": [
+        {
+          "meal": "Breakfast",
+          "recommendation": "Hotel buffet (often includes Indian and continental options), Puri Sabzi, Aloo Paratha, Idli-Dosa at local eateries."
+        },
+        {
+          "meal": "Lunch",
+          "recommendation": "Assamese Veg Thali (dal, rice, pitika, sabzi, khar), North Indian Thali, South Indian meals, or Chinese vegetarian dishes."
+        },
+        {
+          "meal": "Dinner",
+          "recommendation": "Fine dining multi-cuisine vegetarian options, North Indian curries with various breads, or specialized South Indian restaurants."
+        },
+        {
+          "meal": "Snacks",
+          "recommendation": "Samosa, Kachori, Jalebi, Luchi-Sabzi, local sweets, fresh fruit juices."
+        }
+      ],
+      "famousPlaces": [
+        "Kamakhya Temple",
+        "Umananda Temple (Peacock Island)",
+        "Brahmaputra River Cruise",
+        "Assam State Museum",
+        "Srimanta Sankaradeva Kalakshetra",
+        "Basistha Ashram",
+        "Navagraha Temple",
+        "Guwahati Zoo (Assam State Zoo cum Botanical Garden)",
+        "Fancy Bazaar"
+      ],
+      "dosAndDonts": {
+        "dos": [
+          "Respect local customs and traditions, especially at religious sites.",
+          "Dress modestly when visiting temples and other religious places.",
+          "Try the local vegetarian cuisine, including the Assamese Thali.",
+          "Stay hydrated, especially during warmer months.",
+          "Bargain politely when shopping at local markets like Fancy Bazaar.",
+          "Carry a valid ID proof at all times.",
+          "Book private transport (cab) for convenience, given your generous budget."
+        ],
+        "donts": [
+          "Litter or deface public places and historical monuments.",
+          "Disrespect religious sentiments or practices.",
+          "Consume alcohol openly in public areas.",
+          "Trust unknown guides or touts; always opt for official or recommended services.",
+          "Venture out alone late at night in unfamiliar or isolated areas.",
+          "Take photos where explicitly prohibited, especially inside temples."
+        ]
+      }
+    },
+    "timestamp": 1763579388986
+  },
+  "{\"destination\":\"delhi\",\"duration\":2,\"budget\":10000,\"persons\":2,\"objective\":\"leisure and sightseeing\",\"foodType\":\"veg\"}": {
+    "data": {
+      "destination": "Delhi",
+      "duration": 2,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Old Delhi's Heritage & Central Delhi's Icons",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Arrive in Old Delhi. Start with a walk around Red Fort (exterior view only to save time and money) and Jama Masjid (exterior view, respect dress code).",
+              "location": "Red Fort & Jama Masjid, Old Delhi"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "Explore Chandni Chowk. Indulge in a traditional Delhi breakfast/brunch (Parathas, Jalebi, Aloo Puri) at famous eateries.",
+              "location": "Chandni Chowk"
+            },
+            {
+              "time": "12:30 PM",
+              "activity": "Continue exploring Chandni Chowk's various lanes for spices, textiles, and local goods. Try some street food snacks.",
+              "location": "Chandni Chowk"
+            },
+            {
+              "time": "02:00 PM",
+              "activity": "Take a Metro to Central Delhi. Visit India Gate, a war memorial, and drive past Rashtrapati Bhavan (President's House) and Parliament House.",
+              "location": "India Gate & Rajpath"
+            },
+            {
+              "time": "04:30 PM",
+              "activity": "Visit Agrasen ki Baoli, an ancient stepwell, offering a unique architectural experience and a peaceful escape.",
+              "location": "Agrasen ki Baoli"
+            },
+            {
+              "time": "06:30 PM",
+              "activity": "Explore Connaught Place (CP), a bustling commercial hub. Enjoy some window shopping or relax at a cafe.",
+              "location": "Connaught Place"
+            },
+            {
+              "time": "08:00 PM",
+              "activity": "Dinner at a budget-friendly restaurant in Connaught Place or nearby, serving North Indian vegetarian cuisine.",
+              "location": "Connaught Place"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Mughal Marvels & Modern Culture",
+          "activities": [
+            {
+              "time": "09:30 AM",
+              "activity": "Visit Humayun's Tomb, a UNESCO World Heritage site and a precursor to the Taj Mahal. Allow ample time to explore the gardens. (Entry Fee: ₹40 per Indian adult)",
+              "location": "Humayun's Tomb"
+            },
+            {
+              "time": "11:30 AM",
+              "activity": "Head to Qutub Minar, another UNESCO World Heritage site. Explore the complex including the Qutub Minar, Iron Pillar, and Alai Darwaza. (Entry Fee: ₹40 per Indian adult)",
+              "location": "Qutub Minar Complex"
+            },
+            {
+              "time": "01:30 PM",
+              "activity": "Lunch at a local restaurant near Qutub Minar or in Saket/Malviya Nagar area, offering vegetarian thalis or popular dishes.",
+              "location": "Saket/Malviya Nagar"
+            },
+            {
+              "time": "03:30 PM",
+              "activity": "Visit the Lotus Temple (Baháʼí House of Worship), known for its distinctive lotus-like architecture and serene gardens. (Exterior and gardens only, interior may have queues).",
+              "location": "Lotus Temple"
+            },
+            {
+              "time": "05:00 PM",
+              "activity": "Experience Dilli Haat, an open-air market offering handicrafts, food, and cultural performances from various Indian states. Enjoy some regional snacks. (Entry Fee: ₹30 per person)",
+              "location": "Dilli Haat (INA)"
+            },
+            {
+              "time": "07:30 PM",
+              "activity": "Dinner at one of the state food stalls in Dilli Haat for an authentic regional vegetarian meal, or a nearby restaurant.",
+              "location": "Dilli Haat (INA)"
+            },
+            {
+              "time": "09:00 PM",
+              "activity": "Conclude your trip or head back to your accommodation.",
+              "location": "Delhi"
+            }
+          ]
+        }
+      ],
+      "foodItinerary": [
+        {
+          "meal": "Breakfast",
+          "recommendation": "Start your day with authentic Delhi breakfast: Aloo Puri, Chole Bhature, or Parathas from Chandni Chowk. Don't miss Jalebi or Samosa."
+        },
+        {
+          "meal": "Lunch",
+          "recommendation": "Opt for a budget-friendly North Indian Thali, Rajma Chawal, or Kadhi Chawal at local eateries. Chole Bhature is also a great option."
+        },
+        {
+          "meal": "Dinner",
+          "recommendation": "Enjoy a full North Indian vegetarian meal with Paneer dishes, Dal Makhani, assorted breads. Dilli Haat offers diverse regional vegetarian options."
+        },
+        {
+          "meal": "Snacks",
+          "recommendation": "Indulge in Delhi's famous street food: Golgappe, Aloo Tikki, Dahi Bhalla, Kulfi, and various chaats. Look for popular and hygienic vendors."
+        }
+      ],
+      "famousPlaces": [
+        "Red Fort",
+        "Jama Masjid",
+        "Qutub Minar",
+        "Humayun's Tomb",
+        "India Gate",
+        "Lotus Temple",
+        "Chandni Chowk",
+        "Agrasen ki Baoli",
+        "Dilli Haat",
+        "Connaught Place"
+      ],
+      "dosAndDonts": {
+        "dos": [
+          "Utilize the Delhi Metro for efficient and budget-friendly travel between major attractions.",
+          "Bargain politely when shopping at local markets like Chandni Chowk or Dilli Haat.",
+          "Stay hydrated, especially during warmer months, by carrying a water bottle.",
+          "Try street food from popular and well-regarded vendors to ensure hygiene.",
+          "Carry small denominations of cash (₹10, ₹20, ₹50) for street vendors and auto-rickshaws.",
+          "Be aware of your surroundings and keep an eye on your belongings, especially in crowded areas.",
+          "Learn a few basic Hindi phrases like 'Namaste' (hello) and 'Dhanyawad' (thank you)."
+        ],
+        "donts": [
+          "Do not trust unsolicited guides or touts offering 'special' tours or deals.",
+          "Avoid overpaying for auto-rickshaws; insist on using the meter or negotiate a fair price beforehand.",
+          "Do not drink tap water; always opt for bottled water or filtered water.",
+          "Avoid displaying expensive valuables openly, as it can attract unwanted attention.",
+          "Do not litter; use designated dustbins to help keep the city clean.",
+          "Avoid aggressive bargaining, maintain a respectful and friendly demeanor.",
+          "Do not visit religious sites in inappropriate attire (e.g., short skirts/shorts, sleeveless tops); carry a scarf to cover up if needed."
+        ]
+      }
+    },
+    "timestamp": 1763579792711
   }
 }

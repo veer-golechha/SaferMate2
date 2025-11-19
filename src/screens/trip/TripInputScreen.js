@@ -107,7 +107,11 @@ const TripInputScreen = ({ navigation }) => {
             destination: response.trip.destination,
             duration: response.trip.duration,
             createdAt: new Date().toISOString(),
-            data: response.trip,
+            data: {
+              ...response.trip,
+              budget: parseInt(budget),
+              objective: objective.trim() || 'Leisure and sightseeing',
+            },
           };
           const updatedTrips = [trip, ...existingTrips];
           await StorageService.saveTrips(updatedTrips);
@@ -157,9 +161,10 @@ const TripInputScreen = ({ navigation }) => {
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
       >
         {/* Destination */}
-        <View style={styles.inputContainer}>
+        <View style={styles.destinationContainer}>
           <Text style={styles.label}>Destination *</Text>
           <DestinationAutocomplete
             value={destination}
@@ -311,6 +316,10 @@ const styles = StyleSheet.create({
   scrollContent: {
     padding: 20,
     paddingBottom: 40,
+  },
+  destinationContainer: {
+    marginBottom: 20,
+    zIndex: 1000,
   },
   inputContainer: {
     marginBottom: 20,

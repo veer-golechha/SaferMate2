@@ -8,7 +8,6 @@ import {
   Alert,
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
-import StorageService from '../../services/storage';
 
 const TripResultScreen = ({ navigation, route }) => {
   const { tripData } = route.params;
@@ -34,24 +33,6 @@ const TripResultScreen = ({ navigation, route }) => {
         [{ text: 'OK' }]
       );
     }, 2000);
-  };
-
-  const handleSaveTrip = async () => {
-    // Trip is already auto-saved, just navigate to history
-    Alert.alert(
-      'Trip Saved!',
-      'This trip is already saved in your history',
-      [
-        {
-          text: 'View History',
-          onPress: () => navigation.navigate('MainApp', { screen: 'Trips' })
-        },
-        {
-          text: 'OK',
-          style: 'cancel'
-        }
-      ]
-    );
   };
 
   return (
@@ -189,15 +170,6 @@ const TripResultScreen = ({ navigation, route }) => {
           >
             <Text style={styles.actionButtonText}>
               {downloading ? '⏳ Downloading...' : '📥 Download Offline Map'}
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[styles.actionButton, styles.saveButton]}
-            onPress={handleSaveTrip}
-          >
-            <Text style={styles.actionButtonText}>
-              💾 View in Trip History
             </Text>
           </TouchableOpacity>
         </View>
