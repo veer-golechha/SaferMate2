@@ -53,6 +53,8 @@ const HomeScreen = ({ navigation }) => {
       navigation.navigate('ExploreInput');
     } else if (action.id === 'trip') {
       navigation.navigate('TripInput');
+    } else if (action.id === 'civic') {
+      navigation.navigate('CivicDashboard');
     } else {
       Alert.alert(action.title, `${action.title} screen coming soon!`);
     }

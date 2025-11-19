@@ -2158,5 +2158,326 @@
       }
     },
     "timestamp": 1763581196003
+  },
+  "{\"destination\":\"haridwar\",\"duration\":7,\"budget\":50000,\"persons\":4,\"objective\":\"devotion\",\"foodType\":\"veg\"}": {
+    "data": {
+      "destination": "Haridwar",
+      "duration": 7,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Har Ki Pauri Ganga Aarti",
+          "activities": [
+            {
+              "time": "11:00 AM",
+              "activity": "Arrive in Haridwar, check into your pre-booked accommodation. Freshen up and relax.",
+              "location": "Haridwar Hotel/Guest House"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Enjoy a traditional vegetarian lunch at a local eatery.",
+              "location": "Local Restaurant"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "Visit Har Ki Pauri, take a holy dip in the Ganges (Ganga Snan) and explore the ghats.",
+              "location": "Har Ki Pauri"
+            },
+            {
+              "time": "05:00 PM",
+              "activity": "Find a good spot to witness the mesmerizing Ganga Aarti ceremony.",
+              "location": "Har Ki Pauri"
+            },
+            {
+              "time": "07:00 PM",
+              "activity": "Participate in the evening prayers and soak in the spiritual atmosphere.",
+              "location": "Har Ki Pauri"
+            },
+            {
+              "time": "08:30 PM",
+              "activity": "Have dinner at a riverside restaurant.",
+              "location": "Near Har Ki Pauri"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hilltop Temples: Mansa Devi & Chandi Devi",
+          "activities": [
+            {
+              "time": "08:00 AM",
+              "activity": "Enjoy a hearty breakfast.",
+              "location": "Hotel/Local Eatery"
+            },
+            {
+              "time": "09:30 AM",
+              "activity": "Take the ropeway (Udan Khatola) to Mansa Devi Temple, offering panoramic views of Haridwar.",
+              "location": "Mansa Devi Temple"
+            },
+            {
+              "time": "12:00 PM",
+              "activity": "Descend from Mansa Devi and have lunch.",
+              "location": "Local Restaurant"
+            },
+            {
+              "time": "02:00 PM",
+              "activity": "Proceed to Chandi Devi Temple, accessible by another ropeway or a trek.",
+              "location": "Chandi Devi Temple"
+            },
+            {
+              "time": "04:30 PM",
+              "activity": "Explore Bara Bazaar for local handicrafts, religious items, and souvenirs.",
+              "location": "Bara Bazaar"
+            },
+            {
+              "time": "07:30 PM",
+              "activity": "Dinner at a popular local restaurant.",
+              "location": "Haridwar City"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Ancient Temples & Sacred Kunds",
+          "activities": [
+            {
+              "time": "08:30 AM",
+              "activity": "Have breakfast at the hotel.",
+              "location": "Hotel/Local Eatery"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "Visit Daksh Prajapati Temple and Daksheswara Mahadev Temple in Kankhal.",
+              "location": "Kankhal"
+            },
+            {
+              "time": "12:30 PM",
+              "activity": "Lunch at a restaurant in the Kankhal area.",
+              "location": "Kankhal"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "Explore Maya Devi Temple, one of the Shakti Peeths, and Bhimgoda Kund.",
+              "location": "Maya Devi Temple & Bhimgoda Kund"
+            },
+            {
+              "time": "05:00 PM",
+              "activity": "Spend time at a quieter Ganga Ghat for meditation or a peaceful evening dip.",
+              "location": "Various Ganga Ghats"
+            },
+            {
+              "time": "08:00 PM",
+              "activity": "Dinner and return to the hotel.",
+              "location": "Haridwar City"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Spiritual Ashrams & Unique Temples",
+          "activities": [
+            {
+              "time": "08:00 AM",
+              "activity": "Start your day with a light breakfast.",
+              "location": "Hotel/Local Eatery"
+            },
+            {
+              "time": "09:30 AM",
+              "activity": "Visit Saptrishi Ashram and Saptrishi Sarovar, where the Ganges splits into seven streams.",
+              "location": "Saptrishi Ashram"
+            },
+            {
+              "time": "12:00 PM",
+              "activity": "Enjoy lunch at a nearby dhaba or restaurant.",
+              "location": "Near Saptrishi Ashram"
+            },
+            {
+              "time": "02:00 PM",
+              "activity": "Explore Pawan Dham, a beautiful glass temple known for its intricate mirror work.",
+              "location": "Pawan Dham"
+            },
+            {
+              "time": "04:30 PM",
+              "activity": "Visit the local market for some last-minute shopping or simply observe local life.",
+              "location": "Moti Bazaar/Jwalapur Market"
+            },
+            {
+              "time": "07:30 PM",
+              "activity": "Dinner at a restaurant offering local delicacies.",
+              "location": "Haridwar City"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Patriotic & Spiritual Hubs",
+          "activities": [
+            {
+              "time": "08:30 AM",
+              "activity": "Have breakfast.",
+              "location": "Hotel/Local Eatery"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "Visit Bharat Mata Mandir, a unique multi-storey temple dedicated to Mother India.",
+              "location": "Bharat Mata Mandir"
+            },
+            {
+              "time": "12:30 PM",
+              "activity": "Lunch at a restaurant near the temple.",
+              "location": "Near Bharat Mata Mandir"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "Spend the afternoon at Shanti Kunj Gayatri Parivar, a renowned spiritual and social organization. Attend their evening Aarti or discourse if available.",
+              "location": "Shanti Kunj Gayatri Parivar"
+            },
+            {
+              "time": "06:00 PM",
+              "activity": "Relax at the hotel or take a leisurely walk along the Ganges.",
+              "location": "Hotel/Ganga Ghats"
+            },
+            {
+              "time": "08:00 PM",
+              "activity": "Dinner.",
+              "location": "Haridwar City"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Rishikesh Excursion: Yoga Capital",
+          "activities": [
+            {
+              "time": "07:30 AM",
+              "activity": "Early breakfast.",
+              "location": "Hotel/Local Eatery"
+            },
+            {
+              "time": "08:30 AM",
+              "activity": "Depart for a day trip to Rishikesh (approx. 1 hour drive by shared taxi/bus).",
+              "location": "Haridwar Bus Stand/Taxi Stand"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "Explore Laxman Jhula and Ram Jhula, iconic suspension bridges with stunning views.",
+              "location": "Rishikesh"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Have lunch at a cafe overlooking the Ganges in Rishikesh.",
+              "location": "Rishikesh"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "Visit Parmarth Niketan Ashram and explore its beautiful grounds and statues.",
+              "location": "Parmarth Niketan, Rishikesh"
+            },
+            {
+              "time": "05:00 PM",
+              "activity": "Witness the evening Ganga Aarti at Parmarth Niketan (check timings as they vary seasonally).",
+              "location": "Parmarth Niketan, Rishikesh"
+            },
+            {
+              "time": "07:00 PM",
+              "activity": "Return to Haridwar.",
+              "location": "Rishikesh to Haridwar"
+            },
+            {
+              "time": "08:30 PM",
+              "activity": "Dinner in Haridwar.",
+              "location": "Haridwar City"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Morning Rituals & Departure",
+          "activities": [
+            {
+              "time": "06:00 AM",
+              "activity": "Optional: Early morning Ganga Snan or visit a local temple for morning prayers.",
+              "location": "Har Ki Pauri/Local Temple"
+            },
+            {
+              "time": "08:30 AM",
+              "activity": "Enjoy your last breakfast in Haridwar.",
+              "location": "Hotel/Local Eatery"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "Last-minute souvenir shopping or revisit a favorite spot.",
+              "location": "Bara Bazaar/Moti Bazaar"
+            },
+            {
+              "time": "12:00 PM",
+              "activity": "Check out from the hotel.",
+              "location": "Haridwar Hotel"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Have lunch before heading to the railway station/bus stand.",
+              "location": "Local Restaurant"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "Depart from Haridwar with spiritual memories.",
+              "location": "Haridwar Railway Station/Bus Stand"
+            }
+          ]
+        }
+      ],
+      "foodItinerary": [
+        {
+          "meal": "Breakfast",
+          "recommendation": "Puri Sabzi (fluffy fried bread with potato curry), Aloo Paratha (potato-stuffed flatbread) with curd and pickle, Jalebi (sweet fried pretzel-like dessert), Samosa (fried pastry with savory filling)."
+        },
+        {
+          "meal": "Lunch",
+          "recommendation": "North Indian Thali (a platter with dal, sabzi, roti, rice, salad), Chole Bhature (spicy chickpea curry with fried bread), Kadi Chawal (yogurt-based curry with rice), Rajma Chawal (kidney beans curry with rice)."
+        },
+        {
+          "meal": "Dinner",
+          "recommendation": "Similar to lunch, explore different local restaurants. Try Paneer dishes, various vegetable curries, and fresh tandoori rotis. Don't miss out on local sweets like Rabri or Kulfi."
+        },
+        {
+          "meal": "Snacks",
+          "recommendation": "Lassi (yogurt drink), Kachori (fried pastry with lentil filling), Pakoras (fritters), Fruit Chaat (fruit salad with spices), Aloo Tikki (potato patties)."
+        }
+      ],
+      "famousPlaces": [
+        "Har Ki Pauri",
+        "Mansa Devi Temple",
+        "Chandi Devi Temple",
+        "Maya Devi Temple",
+        "Daksh Prajapati Temple",
+        "Bharat Mata Mandir",
+        "Shanti Kunj Gayatri Parivar",
+        "Saptrishi Ashram",
+        "Pawan Dham",
+        "Bara Bazaar"
+      ],
+      "dosAndDonts": {
+        "dos": [
+          "Dress modestly, especially when visiting temples and religious sites.",
+          "Respect local customs and traditions. Remove your shoes before entering temples.",
+          "Bargain politely when shopping in local markets.",
+          "Stay hydrated, especially during warmer months. Drink bottled water.",
+          "Keep the ghats and surroundings clean. Use dustbins.",
+          "Be mindful during Ganga Aarti; maintain silence and respect the ritual.",
+          "Carry a valid ID proof at all times."
+        ],
+        "donts": [
+          "Do not litter or throw waste into the Ganges.",
+          "Avoid consuming non-vegetarian food or alcohol, as Haridwar is a holy city.",
+          "Do not disrespect religious symbols or practices.",
+          "Avoid swimming in strong currents of the Ganges, especially during monsoon.",
+          "Do not trust strangers blindly, especially those offering unsolicited help or guidance.",
+          "Avoid taking photos where explicitly prohibited.",
+          "Do not engage in loud or disruptive behavior in sacred places."
+        ]
+      }
+    },
+    "timestamp": 1763582021416
   }
 }

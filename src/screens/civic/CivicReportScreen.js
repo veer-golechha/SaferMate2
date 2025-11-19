@@ -218,24 +218,16 @@ const CivicReportScreen = ({ navigation }) => {
           ) : (
             <View style={styles.imagePlaceholder}>
               <Text style={styles.placeholderIcon}>📸</Text>
-              <Text style={styles.placeholderText}>No image selected</Text>
+              <Text style={styles.placeholderText}>No image captured</Text>
             </View>
           )}
 
-          <View style={styles.buttonRow}>
-            <TouchableOpacity
-              style={styles.secondaryButton}
-              onPress={captureImage}
-            >
-              <Text style={styles.secondaryButtonText}>📷 Camera</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.secondaryButton}
-              onPress={pickImage}
-            >
-              <Text style={styles.secondaryButtonText}>🖼️ Gallery</Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            style={styles.captureButton}
+            onPress={captureImage}
+          >
+            <Text style={styles.captureButtonText}>📷 Capture Photo</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Location Section */}
@@ -425,23 +417,21 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: COLORS.textGray,
   },
-  buttonRow: {
-    flexDirection: 'row',
-    gap: 12,
-  },
-  secondaryButton: {
-    flex: 1,
-    backgroundColor: COLORS.primaryLight,
-    paddingVertical: 12,
+  captureButton: {
+    backgroundColor: COLORS.primary,
+    paddingVertical: 14,
     borderRadius: 10,
     alignItems: 'center',
-    borderWidth: 1,
-    borderColor: COLORS.primary,
+    shadowColor: COLORS.primary,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 4,
   },
-  secondaryButtonText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: COLORS.primary,
+  captureButtonText: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
   },
   locationBox: {
     flexDirection: 'row',
