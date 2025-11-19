@@ -25,9 +25,6 @@ const CivicDashboardScreen = ({ navigation }) => {
         </TouchableOpacity>
         <View style={styles.headerTextContainer}>
           <Text style={styles.headerTitle}>Civic Dashboard</Text>
-          <Text style={styles.headerSubtitle}>
-            Report issues and track their status
-          </Text>
         </View>
       </View>
 
