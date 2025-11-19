@@ -1,23 +1,37 @@
 import { Platform } from 'react-native';
+import Constants from 'expo-constants';
 
-// API Configuration
-// For physical device, manually set your computer's IP
-// You can find it by running: ipconfig (Windows) or ifconfig (Mac/Linux)
-// Look for "IPv4 Address" under your WiFi adapter
-const COMPUTER_IP = '192.168.29.76'; // CHANGE THIS TO YOUR COMPUTER'S IP
+// API Configuration - Automatically detects your computer's IP
+const getComputerIP = () => {
+  // Get the manifest extra from Expo
+  const manifest = Constants.expoConfig;
+  
+  // Extract IP from debuggerHost (format: "192.168.x.x:19000")
+  if (manifest?.hostUri) {
+    const ip = manifest.hostUri.split(':')[0];
+    console.log('Auto-detected computer IP:', ip);
+    return ip;
+  }
+  
+  // Fallback to localhost if detection fails
+  console.warn('Could not auto-detect IP, using localhost');
+  return 'localhost';
+};
 
 const getApiUrl = () => {
+  const computerIP = getComputerIP();
+  
   if (__DEV__) {
     // If using physical device with Expo Go
     if (Platform.OS === 'android' || Platform.OS === 'ios') {
-      return `http://${COMPUTER_IP}:3000`;
+      return `http://${computerIP}:3000`;
     }
   }
   
   // Fallback for emulator/web
   return Platform.OS === 'android' 
-    ? 'http://192.168.29.76:3000'  // Android emulator
-    : 'http://192.168.29.76:3000'; // iOS simulator/web
+    ? `http://${computerIP}:3000`  // Android emulator
+    : `http://${computerIP}:3000`; // iOS simulator/web
 };
 
 export const API_BASE_URL = getApiUrl();

@@ -62,5 +62,69 @@
       "civicMetric": 3.8
     },
     "timestamp": 1763300774468
+  },
+  "manali": {
+    "data": {
+      "funFacts": [
+        "Manali is named after the ancient sage Manu, who is believed to have recreated human life here after a great flood.",
+        "It serves as the gateway to the remote Lahaul and Spiti valleys, attracting adventurers and trekkers.",
+        "The region is famous for its apple orchards, producing a significant portion of India's apple supply.",
+        "Manali is a hub for adventure sports like paragliding, rafting, zorbing, and skiing, especially in Solang Valley.",
+        "The town is home to the unique Hadimba Devi Temple, a four-tiered pagoda-style temple built around a cave."
+      ],
+      "famousFoods": [
+        "Siddu - A local Himachali bread made from wheat flour, steamed and often stuffed with a mixture of poppy seeds, walnuts, or paneer, served with ghee or dal.",
+        "Babru - A Himachali snack similar to a puri, made from fermented dough and often stuffed with black gram paste, deep-fried and served with chana madra.",
+        "Trout Fish - Freshly caught from the Beas River, this local delicacy is often pan-fried or grilled with minimal spices to highlight its natural flavor.",
+        "Aktori - A traditional festive dish from Spiti and Lahaul, it's a cake or pancake made from buckwheat flour, often served with honey or ghee.",
+        "Chha Gosht - A Himachali mutton dish where marinated lamb is cooked in a rich gravy of yogurt and gram flour, flavored with aromatic spices."
+      ],
+      "famousPlaces": [
+        "Hadimba Devi Temple - An ancient cave temple dedicated to Hadimba Devi, wife of Bhima from the Mahabharata, known for its unique pagoda-style architecture amidst cedar forests.",
+        "Solang Valley - A popular adventure sports destination offering activities like paragliding, zorbing, ATV rides in summer, and skiing/snowboarding in winter.",
+        "Rohtang Pass - A high mountain pass (3,980 m) on the Pir Panjal Range, offering breathtaking panoramic views of glaciers, peaks, and the Lahaul Valley (accessible only seasonally).",
+        "Old Manali - A charming village across the Manalsu River, known for its bohemian vibe, quaint cafes, guesthouses, and stunning views of the surrounding mountains.",
+        "Vashisht Village - Famous for its natural hot springs with medicinal properties and ancient temples dedicated to Sage Vashisht and Lord Rama."
+      ],
+      "weather": {
+        "temperature": 13.5,
+        "condition": "Varied, with pleasant summers, cold and snowy winters, and monsoon rains."
+      },
+      "aqi": 45,
+      "civicMetric": 3.8
+    },
+    "timestamp": 1763526617875
+  },
+  "goa": {
+    "data": {
+      "funFacts": [
+        "Goa is the smallest state in India by area and the fourth smallest by population.",
+        "It was a Portuguese colony for about 450 years, gaining liberation in 1961, which heavily influenced its culture, architecture, and cuisine.",
+        "Goa is the only state in India where cashew feni, a spirit distilled from cashews, is legally produced and sold.",
+        "The state is home to two UNESCO World Heritage Sites: the Churches and Convents of Old Goa, including the Basilica of Bom Jesus.",
+        "Goa is known for its unique blend of Indian and Portuguese cultures, visible in its festivals, music, and lifestyle."
+      ],
+      "famousFoods": [
+        "Goan Fish Curry (Xitti Kodi) - A staple dish made with coconut milk, red chilies, and various spices, typically featuring kingfish or pomfret.",
+        "Pork Vindaloo - A fiery and tangy curry made with pork, vinegar, garlic, and a blend of spices, a legacy of Portuguese cuisine.",
+        "Chicken Xacuti - A rich, complex curry with roasted spices, coconut, poppy seeds, and dried red chilies, often made with chicken or lamb.",
+        "Bebinca - A traditional Goan layered cake made with coconut milk, flour, sugar, and ghee, baked in multiple thin layers, often called the 'Queen of Goan Desserts'.",
+        "Prawn Balchão - A spicy and tangy pickle-like curry made with prawns, vinegar, and a robust spice paste, often served as a condiment."
+      ],
+      "famousPlaces": [
+        "Palolem Beach - A crescent-shaped beach in South Goa known for its calm waters, palm trees, and relaxed atmosphere, ideal for swimming and sunbathing.",
+        "Basilica of Bom Jesus - A UNESCO World Heritage site in Old Goa, famous for housing the mortal remains of St. Francis Xavier, a masterpiece of Baroque architecture.",
+        "Fort Aguada - A 17th-century Portuguese fort and lighthouse overlooking the Arabian Sea, offering panoramic views and historical significance.",
+        "Dudhsagar Falls - One of India's tallest waterfalls, located on the Mandovi River, known for its milky white appearance, especially during the monsoon.",
+        "Anjuna Flea Market - A vibrant, sprawling market held every Wednesday, offering everything from souvenirs and clothing to handicrafts and food, a true Goan experience."
+      ],
+      "weather": {
+        "temperature": 29,
+        "condition": "Tropical, humid, with distinct dry and monsoon seasons. Generally sunny."
+      },
+      "aqi": 65,
+      "civicMetric": 3.8
+    },
+    "timestamp": 1763529935947
   }
 }
