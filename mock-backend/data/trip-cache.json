@@ -1,0 +1,797 @@
+{
+  "{\"destination\":\"indore\",\"duration\":2,\"budget\":10000,\"persons\":2,\"objective\":\"enjoy\",\"foodType\":\"veg\"}": {
+    "data": {
+      "destination": "Indore",
+      "duration": 2,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Historical Marvels & Street Food Delights",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Indore pahunch kar hotel mein check-in karein aur thoda aaram karein. (Arrive in Indore, check into your budget-friendly hotel, and relax a bit.)",
+              "location": "Hotel (e.g., near Railway Station or Vijay Nagar area)"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "Breakfast ke liye Indori Poha aur Jalebi ka swaad lein. (Savor Indori Poha and Jalebi for breakfast, a must-try local specialty.)",
+              "location": "Local eatery near hotel or a famous spot like Apna Sweets"
+            },
+            {
+              "time": "11:00 AM",
+              "activity": "Indore ke shandaar Rajwada Palace ki sair karein, jo Holkar vansh ki virasat darshata hai. (Explore the magnificent Rajwada Palace, showcasing the heritage of the Holkar dynasty.)",
+              "location": "Rajwada Palace"
+            },
+            {
+              "time": "12:30 PM",
+              "activity": "Kanch Mandir (Glass Temple) ki adbhut kala aur shanti ka anubhav karein. (Experience the exquisite artistry and serenity of Kanch Mandir (Glass Temple), adorned with thousands of mirrors.)",
+              "location": "Kanch Mandir"
+            },
+            {
+              "time": "01:30 PM",
+              "activity": "Lunch ke liye ek sthaniya restaurant mein swadisht Dal Bafla ya veg thali ka anand lein. (Enjoy a delicious Dal Bafla or a wholesome veg thali for lunch at a local restaurant.)",
+              "location": "Local Restaurant (e.g., Shree Guru Kripa, Rajhans Restaurant)"
+            },
+            {
+              "time": "03:30 PM",
+              "activity": "Lal Bagh Palace ki shahi shaan aur uske khoobsurat bagichon ko dekhein. (Visit the regal grandeur of Lal Bagh Palace and its beautiful gardens, reflecting European architecture.)",
+              "location": "Lal Bagh Palace"
+            },
+            {
+              "time": "06:30 PM",
+              "activity": "Shaam ko prasiddh Sarafa Bazaar mein ghoomein aur wahan ke anokhe street food ka swaad lein. Yeh bazaar raat mein food hub ban jaata hai. (In the evening, stroll through the famous Sarafa Bazaar and indulge in its unique street food. This market transforms into a vibrant food hub at night.)",
+              "location": "Sarafa Bazaar"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Spiritual Serenity & Culinary Hotspots",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Hotel mein breakfast karein ya phir kisi local cafe mein Indori nashta try karein. (Have breakfast at the hotel or try Indori breakfast at a local cafe.)",
+              "location": "Hotel or Local Cafe"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "Khajrana Ganesh Temple ke darshan karein, jo Indore ka ek bahut hi pavitra sthal hai aur yahan ki murti bahut prasiddh hai. (Visit the Khajrana Ganesh Temple, a very sacred site in Indore, famous for its idol.)",
+              "location": "Khajrana Ganesh Temple"
+            },
+            {
+              "time": "11:30 AM",
+              "activity": "Annapurna Temple ki shanti ka anubhav karein, jo Devi Annapurna ko samarpit hai. (Experience the tranquility of Annapurna Temple, dedicated to Goddess Annapurna.)",
+              "location": "Annapurna Temple"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Lunch ke liye ek achhe veg restaurant mein bhojan karein. (Have lunch at a good vegetarian restaurant, trying local specialties or a full meal.)",
+              "location": "Local Restaurant (e.g., Shreemaya Celebrity, Nafees Bakery & Restaurant for veg options)"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "Chappan Dukan par alag-alag tarah ke snacks, sweets aur shakes ka anand lein. Yeh ek aur prasiddh food street hai. (Enjoy various snacks, sweets, and shakes at Chappan Dukan. This is another famous food street.)",
+              "location": "Chappan Dukan"
+            },
+            {
+              "time": "04:00 PM",
+              "activity": "Thodi shopping karein ya Central Museum mein Indore ke itihaas aur kala ko samjhein. (Do some souvenir shopping at local markets or explore Indore's history and art at the Central Museum.)",
+              "location": "Central Museum / Local Market (e.g., MT Cloth Market for textiles, or general souvenir shops)"
+            },
+            {
+              "time": "06:00 PM",
+              "activity": "Shaam ki chai/coffee aur halka nashta karein, phir Indore se prasthan ke liye taiyari karein. (Have evening tea/coffee and light snacks, then prepare for departure from Indore.)",
+              "location": "Cafe or Departure Point"
+            }
+          ]
+        }
+      ],
+      "foodItinerary": [
+        {
+          "meal": "Breakfast",
+          "recommendation": "Indori Poha-Jalebi (a must-try), Samosa, Kachori, Garam Doodh (hot milk) at local eateries or famous spots like Apna Sweets, Om Prakash Parathe Wale."
+        },
+        {
+          "meal": "Lunch",
+          "recommendation": "Dal Bafla/Baati (traditional Malwa dish), Veg Thali, Sabudana Khichdi, Pulao at restaurants like Shree Guru Kripa, Shreemaya Celebrity, or local dhabas."
+        },
+        {
+          "meal": "Dinner",
+          "recommendation": "Sarafa Bazaar street food (Bhutta ka Kees, Garadu, Dahi Vada, Pani Puri, Kulfi, Malpua, Sabudana Vada), or a full meal at a restaurant if you prefer a sit-down dinner."
+        },
+        {
+          "meal": "Snacks",
+          "recommendation": "Chappan Dukan (Hot Dog (veg), Patties, Shakes, Sweets, Vijay Chat House), Indori Namkeen (various types of sev and mixtures), Gajak (seasonal sweet)."
+        }
+      ],
+      "famousPlaces": [
+        "Rajwada Palace",
+        "Kanch Mandir",
+        "Lal Bagh Palace",
+        "Sarafa Bazaar",
+        "Chappan Dukan",
+        "Khajrana Ganesh Temple",
+        "Annapurna Temple",
+        "Central Museum",
+        "Krishnapura Chhatris"
+      ],
+      "dosAndDonts": {
+        "dos": [
+          "Indore ke prasiddh street food ka swaad zaroor lein, khaaskar Poha-Jalebi aur Sarafa Bazaar ki dishes. (Do try Indore's famous street food, especially Poha-Jalebi and Sarafa Bazaar dishes.)",
+          "Local markets mein kharidari karte samay mol-bhav karein, khaaskar chhote dukaanon par. (Do bargain while shopping in local markets, especially at smaller shops.)",
+          "Paryapt paani piyein aur garmi se bachein, khaaskar garmiyon mein. (Do drink plenty of water and stay hydrated, especially in summers.)",
+          "Dharmik sthalon par maryada aur shanti banaye rakhein aur uchit vastra pehnein. (Do maintain decorum and peace at religious sites and wear appropriate attire.)",
+          "Local transport ke liye auto-rickshaw ya ride-sharing apps (Ola/Uber) ka upyog karein, yeh suvidhajanak aur budget-friendly hain. (Do use auto-rickshaws or ride-sharing apps (Ola/Uber) for local transport, they are convenient and budget-friendly.)",
+          "Apne budget ka dhyan rakhein aur kharchon ko track karein taaki aap ₹10000 ke andar reh sakein. (Do keep track of your budget and expenses to stay within ₹10000.)"
+        ],
+        "donts": [
+          "Sadkon par kooda na phenkein aur swachhta banaye rakhein. (Don't litter on the streets and maintain cleanliness.)",
+          "Dharmik sthalon par tasveerein lete samay flash ka upyog na karein, agar mana ho. (Don't use flash photography at religious places if prohibited.)",
+          "Der raat Sarafa Bazaar mein zyada bheed hone par apne samaan ka dhyan rakhein. (Don't be careless with your belongings in Sarafa Bazaar late at night due to crowds.)",
+          "Anjaan logon se zyada ghulne-milne se bachein aur apni suraksha ka dhyan rakhein. (Don't get overly friendly with strangers and prioritize your safety.)",
+          "Traffic niyam na todein, khaaskar paidal chalte samay aur sadak paar karte samay savdhani bartein. (Don't break traffic rules, especially while walking and crossing roads.)",
+          "Aisi jagahon par na jayein jo surakshit na hon ya jahan jaane ki salah na di gayi ho. (Don't visit places that are unsafe or not recommended.)"
+        ]
+      }
+    },
+    "timestamp": 1763577034811
+  },
+  "{\"destination\":\"goa\",\"duration\":7,\"budget\":40000,\"persons\":1,\"objective\":\"relaxation\",\"foodType\":\"veg\"}": {
+    "data": {
+      "destination": "Goa",
+      "duration": 7,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & North Goa Beach Bliss",
+          "activities": [
+            {
+              "time": "12:00 PM",
+              "activity": "Dabolim Airport (GOI) से आगमन, प्री-बुक किए गए टैक्सी/कैब से होटल/गेस्टहाउस (उत्तरी गोवा में) चेक-इन करें।",
+              "location": "उत्तरी गोवा (जैसे अंजुना, वागेटर, आरपोरा)"
+            },
+            {
+              "time": "02:00 PM",
+              "activity": "होटल में आराम करें और फ्रेश हों।",
+              "location": "होटल/गेस्टहाउस"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "आस-पास के किसी कैफे में हल्का शाकाहारी लंच करें।",
+              "location": "स्थानीय कैफे"
+            },
+            {
+              "time": "04:30 PM",
+              "activity": "अंजुना बीच पर टहलें, समुद्र किनारे आराम करें और सूर्यास्त का आनंद लें।",
+              "location": "अंजुना बीच"
+            },
+            {
+              "time": "07:30 PM",
+              "activity": "समुद्र किनारे किसी शांत शाकाहारी रेस्टोरेंट में डिनर करें।",
+              "location": "अंजुना बीच शैक/रेस्टोरेंट"
+            },
+            {
+              "time": "09:00 PM",
+              "activity": "होटल वापस आएं और आराम करें।",
+              "location": "होटल/गेस्टहाउस"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Yoga, Serene Beaches & Sunset Cruise",
+          "activities": [
+            {
+              "time": "07:00 AM",
+              "activity": "सुबह की योग क्लास में भाग लें (कई गेस्टहाउस या बीच शैक योग सेशन ऑफर करते हैं)।",
+              "location": "स्थानीय योग सेंटर/बीच शैक"
+            },
+            {
+              "time": "08:30 AM",
+              "activity": "होटल में या पास के कैफे में शाकाहारी नाश्ता करें।",
+              "location": "होटल/स्थानीय कैफे"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "मोरजिम बीच (टर्टल बीच) की ओर जाएं, जो अपनी शांति और कछुओं के घोंसले के लिए जाना जाता है।",
+              "location": "मोरजिम बीच"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "मोरजिम में किसी बीच शैक पर शाकाहारी लंच करें।",
+              "location": "मोरजिम बीच शैक"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "आराम करें, किताब पढ़ें या समुद्र में तैरें।",
+              "location": "मोरजिम बीच"
+            },
+            {
+              "time": "05:00 PM",
+              "activity": "मंडोवी नदी पर सूर्यास्त क्रूज का अनुभव करें (वैकल्पिक, अतिरिक्त लागत)।",
+              "location": "मंडोवी नदी, पणजी"
+            },
+            {
+              "time": "08:00 PM",
+              "activity": "उत्तरी गोवा वापस आकर किसी अच्छे शाकाहारी रेस्टोरेंट में डिनर करें।",
+              "location": "उत्तरी गोवा रेस्टोरेंट"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Fort Views & Arambol's Bohemian Charm",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "होटल में शाकाहारी नाश्ता करें।",
+              "location": "होटल/गेस्टहाउस"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "चपोरा फोर्ट जाएं और वागेटर बीच और आसपास के शानदार नज़ारों का आनंद लें।",
+              "location": "चपोरा फोर्ट"
+            },
+            {
+              "time": "12:30 PM",
+              "activity": "अरामबोल बीच की ओर बढ़ें, जो अपने बोहेमियन माहौल के लिए प्रसिद्ध है।",
+              "location": "अरामबोल बीच"
+            },
+            {
+              "time": "01:30 PM",
+              "activity": "अरामबोल में किसी कैफे में शाकाहारी लंच करें।",
+              "location": "अरामबोल कैफे"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "अरामबोल स्वीट वाटर लेक और पास के जंगल में टहलें।",
+              "location": "अरामबोल स्वीट वाटर लेक"
+            },
+            {
+              "time": "05:30 PM",
+              "activity": "अरामबोल बीच पर सूर्यास्त देखें और ड्रम सर्कल (यदि उपलब्ध हो) का अनुभव करें।",
+              "location": "अरामबोल बीच"
+            },
+            {
+              "time": "08:00 PM",
+              "activity": "उत्तरी गोवा वापस आकर डिनर करें।",
+              "location": "उत्तरी गोवा रेस्टोरेंट"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Old Goa Heritage & Spice Plantation Tour",
+          "activities": [
+            {
+              "time": "08:30 AM",
+              "activity": "होटल में शाकाहारी नाश्ता करें।",
+              "location": "होटल/गेस्टहाउस"
+            },
+            {
+              "time": "09:30 AM",
+              "activity": "ओल्ड गोवा के लिए टैक्सी/स्कूटर से यात्रा करें।",
+              "location": "ओल्ड गोवा"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "बेसिलिका ऑफ बॉम जीसस और से कैथेड्रल जैसे ऐतिहासिक चर्चों और स्मारकों का भ्रमण करें।",
+              "location": "बेसिलिका ऑफ बॉम जीसस, से कैथेड्रल"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "एक मसाला बागान (Spice Plantation) का दौरा करें, जहां आप मसालों के बारे में जान सकते हैं और पारंपरिक शाकाहारी गोअन लंच का आनंद ले सकते हैं।",
+              "location": "सहकारी स्पाइस प्लांटेशन/सहेकरी स्पाइस फार्म"
+            },
+            {
+              "time": "04:00 PM",
+              "activity": "उत्तरी गोवा वापस आएं और आराम करें।",
+              "location": "होटल/गेस्टहाउस"
+            },
+            {
+              "time": "07:30 PM",
+              "activity": "किसी शांत कैफे में डिनर करें या होटल में आराम करें।",
+              "location": "उत्तरी गोवा कैफे"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "title": "South Goa's Pristine Beaches (Day Trip)",
+          "activities": [
+            {
+              "time": "07:00 AM",
+              "activity": "जल्दी नाश्ता करें और दक्षिण गोवा के लिए टैक्सी किराए पर लें (पूरे दिन के लिए)।",
+              "location": "होटल/गेस्टहाउस"
+            },
+            {
+              "time": "09:30 AM",
+              "activity": "पालोलेम बीच पहुंचें, जो अपने अर्धचंद्राकार आकार और शांत पानी के लिए प्रसिद्ध है।",
+              "location": "पालोलेम बीच"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "समुद्र में तैरें, धूप सेंकें या कयाकिंग का आनंद लें (वैकल्पिक)।",
+              "location": "पालोलेम बीच"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "पालोलेम में किसी बीच शैक पर शाकाहारी लंच करें।",
+              "location": "पालोलेम बीच शैक"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "अगोन्डा बीच की ओर बढ़ें, जो पालोलेम से भी अधिक शांत और कम भीड़भाड़ वाला है।",
+              "location": "अगोन्डा बीच"
+            },
+            {
+              "time": "04:30 PM",
+              "activity": "अगोन्डा में सूर्यास्त का आनंद लें।",
+              "location": "अगोन्डा बीच"
+            },
+            {
+              "time": "06:00 PM",
+              "activity": "उत्तरी गोवा के लिए वापसी की यात्रा शुरू करें।",
+              "location": "अगोन्डा बीच"
+            },
+            {
+              "time": "09:00 PM",
+              "activity": "होटल वापस आकर हल्का डिनर करें।",
+              "location": "होटल/गेस्टहाउस"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Wellness & Local Market Exploration",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "होटल में शाकाहारी नाश्ता करें।",
+              "location": "होटल/गेस्टहाउस"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "एक आयुर्वेदिक मसाज या स्पा सेशन बुक करें (पहले से बुकिंग की सलाह दी जाती है)।",
+              "location": "स्थानीय स्पा/वेलनेस सेंटर"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "स्थानीय कैफे में शाकाहारी लंच करें।",
+              "location": "स्थानीय कैफे"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "मापुसा मार्केट (यदि शुक्रवार हो) या अंजुना फ्ली मार्केट (यदि बुधवार हो) का भ्रमण करें। स्थानीय हस्तशिल्प और स्मृति चिन्ह खरीदें।",
+              "location": "मापुसा मार्केट/अंजुना फ्ली मार्केट"
+            },
+            {
+              "time": "05:00 PM",
+              "activity": "किसी शांत बीच शैक पर आराम करें और सूर्यास्त का आनंद लें।",
+              "location": "वागेटर बीच/कैलंगुट बीच"
+            },
+            {
+              "time": "07:30 PM",
+              "activity": "एक विशेष शाकाहारी डिनर का आनंद लें।",
+              "location": "उत्तरी गोवा रेस्टोरेंट"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Leisure & Departure",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "आराम से शाकाहारी नाश्ता करें।",
+              "location": "होटल/गेस्टहाउस"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "होटल से चेक-आउट करें।",
+              "location": "होटel/गेस्टहाउस"
+            },
+            {
+              "time": "11:00 AM",
+              "activity": "यदि समय हो तो कुछ अंतिम मिनट की खरीदारी करें या पास के बीच पर टहलें।",
+              "location": "स्थानीय बाजार/बीच"
+            },
+            {
+              "time": "12:30 PM",
+              "activity": "हल्का शाकाहारी लंच करें।",
+              "location": "स्थानीय कैफे"
+            },
+            {
+              "time": "02:00 PM",
+              "activity": "प्री-बुक किए गए टैक्सी/कैब से डबोलिम एयरपोर्ट (GOI) के लिए प्रस्थान करें।",
+              "location": "डबोलिम एयरपोर्ट (GOI)"
+            }
+          ]
+        }
+      ],
+      "foodItinerary": [
+        {
+          "meal": "Breakfast",
+          "recommendation": "पोहा, उपमा, इडली-वड़ा, पूरी भाजी, फ्रूट प्लैटर, पैनकेक, टोस्ट और जैम, फ्रेश जूस।"
+        },
+        {
+          "meal": "Lunch",
+          "recommendation": "गोअन वेज थाली (सब्जी करी, चावल, रोटी), मशरूम मसाला, दाल फ्राई, राइस, वेज एक्सकुटी, फ्रेश सलाद।"
+        },
+        {
+          "meal": "Dinner",
+          "recommendation": "पनीर टिक्का, वेज बिरयानी, पास्ता, पिज्जा, कॉन्टिनेंटल वेज डिशेज, गोअन वेज करी।"
+        },
+        {
+          "meal": "Snacks",
+          "recommendation": "समोसा, वड़ा पाव, भजिया, फ्रेश नारियल पानी, फ्रूट जूस, गोअन स्वीट्स (बेबिंका, डोडोल), फ्राइड मोमोस।"
+        }
+      ],
+      "famousPlaces": [
+        "अंजुना बीच",
+        "वागेटर बीच",
+        "चपोरा फोर्ट",
+        "बेसिलिका ऑफ बॉम जीसस (ओल्ड गोवा)",
+        "से कैथेड्रल (ओल्ड गोवा)",
+        "पालोलेम बीच",
+        "अरामबोल स्वीट वाटर लेक",
+        "मोरजिम बीच",
+        "मापुसा मार्केट",
+        "सहकारी स्पाइस प्लांटेशन"
+      ],
+      "dosAndDonts": {
+        "dos": [
+          "पर्याप्त पानी पीकर हाइड्रेटेड रहें।",
+          "स्थानीय संस्कृति और रीति-रिवाजों का सम्मान करें।",
+          "स्कूटर किराए पर लें (यदि आप सहज हों) स्थानीय परिवहन के लिए।",
+          "स्थानीय शाकाहारी व्यंजनों का स्वाद लें।",
+          "समुद्र तटों पर सूर्यास्त का आनंद लें।",
+          "धूप से बचाव के लिए सनस्क्रीन और टोपी का प्रयोग करें।",
+          "स्थानीय बाजारों में खरीदारी करते समय मोलभाव करें।"
+        ],
+        "donts": [
+          "समुद्र तटों या सार्वजनिक स्थानों पर कूड़ा न फैलाएं।",
+          "धार्मिक स्थलों पर अनुचित कपड़े न पहनें।",
+          "शराब पीकर गाड़ी न चलाएं।",
+          "असुरक्षित या भीड़भाड़ वाले क्षेत्रों में देर रात अकेले न घूमें।",
+          "समुद्र में अकेले या खतरनाक लहरों के दौरान तैरने से बचें।",
+          "अपने कीमती सामान को लावारिस न छोड़ें।",
+          "स्थानीय लोगों के साथ अभद्र व्यवहार न करें।"
+        ]
+      }
+    },
+    "timestamp": 1763577264701
+  },
+  "{\"destination\":\"indore\",\"duration\":7,\"budget\":40000,\"persons\":4,\"objective\":\"leisure and sightseeing\",\"foodType\":\"veg\"}": {
+    "data": {
+      "destination": "Indore",
+      "duration": 7,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Rajwada Heritage Walk",
+          "activities": [
+            {
+              "time": "11:00 AM",
+              "activity": "Arrive in Indore, check into your pre-booked hotel. Freshen up and relax after your journey.",
+              "location": "Hotel (e.g., near Vijay Nagar or Railway Station for good connectivity)"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Enjoy a traditional Malwa thali for lunch, offering a taste of local cuisine.",
+              "location": "Local Restaurant (e.g., Shreemaya Celebrity or a popular thali place)"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "Explore the iconic Rajwada Palace, a magnificent seven-story historical palace showcasing a unique blend of Maratha, Mughal, and French architectural styles.",
+              "location": "Rajwada Palace"
+            },
+            {
+              "time": "04:30 PM",
+              "activity": "Visit Kanch Mandir, a stunning Jain temple entirely adorned with intricate glass mosaics and mirror work, creating a dazzling effect.",
+              "location": "Kanch Mandir"
+            },
+            {
+              "time": "06:00 PM",
+              "activity": "Stroll through the bustling streets around Rajwada, soaking in the vibrant local atmosphere and observing daily life.",
+              "location": "Rajwada Market Area"
+            },
+            {
+              "time": "08:00 PM",
+              "activity": "Experience the world-famous Sarafa Bazaar, a jewelry market by day that transforms into a vibrant street food paradise by night. Indulge in a variety of local vegetarian delicacies.",
+              "location": "Sarafa Bazaar"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Palaces, Chhatris & Cultural Insights",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Have breakfast at a local eatery, trying Indori Poha and Jalebi, a quintessential Indore breakfast.",
+              "location": "Local Eatery (e.g., near your hotel or a popular spot like Chappan Dukan)"
+            },
+            {
+              "time": "10:00 AM",
+              "activity": "Visit the grand Lal Bagh Palace, a magnificent 19th-century palace that once served as the residence of the Holkar rulers, showcasing European architecture and royal artifacts.",
+              "location": "Lal Bagh Palace"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Lunch at a restaurant offering North Indian or South Indian vegetarian cuisine.",
+              "location": "Restaurant in Palasia or MG Road area"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "Explore the Central Museum (Indore Museum), housing a rich collection of artifacts ranging from prehistoric tools to sculptures from the Gupta and Paramara periods.",
+              "location": "Central Museum (Indore Museum)"
+            },
+            {
+              "time": "04:30 PM",
+              "activity": "Visit Krishnapura Chhatris, a serene complex of cenotaphs dedicated to the Holkar rulers, known for their architectural beauty and peaceful surroundings by the Khan River.",
+              "location": "Krishnapura Chhatris"
+            },
+            {
+              "time": "06:30 PM",
+              "activity": "Enjoy a relaxing evening walk or some light shopping for textiles and local goods.",
+              "location": "MT Cloth Market or nearby shopping areas"
+            },
+            {
+              "time": "08:30 PM",
+              "activity": "Dinner at a family-friendly vegetarian restaurant.",
+              "location": "Restaurant of choice"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Spiritual Serenity & Nature's Embrace",
+          "activities": [
+            {
+              "time": "08:30 AM",
+              "activity": "Start your day with a visit to the famous Khajrana Ganesh Temple, one of the most revered temples in Indore, known for its large idol of Lord Ganesha.",
+              "location": "Khajrana Ganesh Temple"
+            },
+            {
+              "time": "09:30 AM",
+              "activity": "Have breakfast near the temple, trying local snacks like Samosa or Kachori.",
+              "location": "Eateries near Khajrana Temple"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "Visit the Annapurna Temple, dedicated to the goddess Annapurna, featuring intricate carvings and a peaceful ambiance, resembling the Meenakshi Temple of Madurai.",
+              "location": "Annapurna Temple"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Lunch at a pure vegetarian restaurant.",
+              "location": "Local Veg Restaurant"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "Head to Ralamandal Wildlife Sanctuary for a refreshing nature walk and bird watching. It's a small, accessible sanctuary perfect for a couple of hours amidst greenery.",
+              "location": "Ralamandal Wildlife Sanctuary"
+            },
+            {
+              "time": "05:30 PM",
+              "activity": "Relax at Pipliyapala Regional Park (ATAL Bihari Vajpayee Regional Park), enjoy the lush greenery, boating, and the musical fountain show (check timings and availability).",
+              "location": "Pipliyapala Regional Park"
+            },
+            {
+              "time": "08:00 PM",
+              "activity": "Dinner at a restaurant offering a variety of vegetarian dishes, perhaps exploring a different cuisine.",
+              "location": "Restaurant near your hotel or Vijay Nagar"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Indore's Foodie Paradise & Shopping Spree",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Experience breakfast at Chappan Dukan, a cluster of 56 food shops. Try Indori Poha, Jalebi, Bhutte ka Kees, and other local delights.",
+              "location": "Chappan Dukan"
+            },
+            {
+              "time": "11:00 AM",
+              "activity": "Indulge in some souvenir shopping or explore local handicrafts and traditional items at Topkhana Market.",
+              "location": "Topkhana Market"
+            },
+            {
+              "time": "01:30 PM",
+              "activity": "Lunch at a popular local restaurant, perhaps trying Dal Bafla or a traditional thali for a hearty meal.",
+              "location": "Pishori Dhaba or similar local eatery"
+            },
+            {
+              "time": "03:30 PM",
+              "activity": "Continue your shopping spree at Sitlamata Bazaar for textiles, traditional wear, jewelry, and other local goods.",
+              "location": "Sitlamata Bazaar"
+            },
+            {
+              "time": "06:00 PM",
+              "activity": "Enjoy evening snacks like Garadu (a local yam preparation) or Pani Puri from a street vendor.",
+              "location": "Street food stalls around Chappan Dukan or Sarafa"
+            },
+            {
+              "time": "07:30 PM",
+              "activity": "Catch a movie at a local multiplex or enjoy a relaxed evening at a cafe with board games.",
+              "location": "Local Multiplex/Cafe"
+            },
+            {
+              "time": "09:00 PM",
+              "activity": "Dinner at a restaurant known for its authentic Malwa cuisine or a multi-cuisine vegetarian spread.",
+              "location": "Malwa Restaurant or a popular family restaurant"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Day Trip to Mandu - The City of Joy",
+          "activities": [
+            {
+              "time": "08:00 AM",
+              "activity": "Early breakfast at the hotel or a quick bite on the way to save time.",
+              "location": "Hotel/Roadside Eatery"
+            },
+            {
+              "time": "08:30 AM",
+              "activity": "Depart for Mandu (approx. 2-2.5 hours drive). Hire a private taxi for a comfortable day trip.",
+              "location": "Mandu"
+            },
+            {
+              "time": "11:00 AM",
+              "activity": "Explore the Royal Enclave: Jahaz Mahal (Ship Palace), Hindola Mahal (Swinging Palace), and the Champa Baoli.",
+              "location": "Mandu Royal Enclave"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Have lunch at a local restaurant in Mandu, enjoying simple yet delicious vegetarian fare.",
+              "location": "Local Restaurant in Mandu"
+            },
+            {
+              "time": "02:30 PM",
+              "activity": "Visit Rani Roopmati's Pavilion and Baz Bahadur's Palace, offering panoramic views of the Narmada valley and the surrounding landscape.",
+              "location": "Rani Roopmati's Pavilion & Baz Bahadur's Palace"
+            },
+            {
+              "time": "04:00 PM",
+              "activity": "Explore the Mandu Mosque Complex: Hoshang Shah's Tomb (India's first marble monument) and the grand Jami Masjid.",
+              "location": "Mandu Mosque Complex"
+            },
+            {
+              "time": "05:30 PM",
+              "activity": "Begin your journey back to Indore, enjoying the scenic drive.",
+              "location": "En route to Indore"
+            },
+            {
+              "time": "08:00 PM",
+              "activity": "Arrive back in Indore. Have a light dinner or snacks after a long day of exploration.",
+              "location": "Hotel/Local Eatery in Indore"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Wildlife, Recreation & Farewell",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Enjoy a leisurely breakfast at your hotel or a nearby cafe, perhaps trying something new.",
+              "location": "Hotel/Cafe"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "Visit Kamla Nehru Prani Sangrahalaya (Indore Zoo), home to a variety of animals, birds, and reptiles, including some rare species.",
+              "location": "Indore Zoo"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Lunch at a multi-cuisine vegetarian restaurant, perhaps in a mall for a modern dining experience.",
+              "location": "Restaurant in a mall or popular area"
+            },
+            {
+              "time": "03:00 PM",
+              "activity": "Spend a relaxing afternoon at the Regional Park (Pipliyapala Regional Park) if you wish to revisit, or explore a local art gallery or bookshop.",
+              "location": "Pipliyapala Regional Park / Local Art Gallery"
+            },
+            {
+              "time": "05:00 PM",
+              "activity": "Last-minute souvenir shopping or picking up some famous Indori namkeens (savory snacks) and sweets to take home.",
+              "location": "Local Markets / Namkeen Shops (e.g., Agrawal Sweets & Namkeen)"
+            },
+            {
+              "time": "07:30 PM",
+              "activity": "Enjoy a special farewell dinner at a highly-rated vegetarian restaurant, savoring your favorite dishes.",
+              "location": "High-rated Veg Restaurant (e.g., Nafees Restaurant - known for veg options, Mediterra)"
+            },
+            {
+              "time": "09:00 PM",
+              "activity": "Return to the hotel, pack your bags, and prepare for departure.",
+              "location": "Hotel"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Departure from Indore",
+          "activities": [
+            {
+              "time": "09:00 AM",
+              "activity": "Enjoy a final Indori breakfast, perhaps revisiting your favorite Poha or Jalebi spot.",
+              "location": "Local Eatery"
+            },
+            {
+              "time": "10:30 AM",
+              "activity": "Depending on your flight/train schedule, you can do some last-minute shopping or revisit a favorite spot for a quick memory.",
+              "location": "Local Market / Favorite Spot"
+            },
+            {
+              "time": "12:00 PM",
+              "activity": "Check out from the hotel.",
+              "location": "Hotel"
+            },
+            {
+              "time": "01:00 PM",
+              "activity": "Head to the airport or railway station for your onward journey, carrying sweet memories of Indore.",
+              "location": "Indore Airport/Railway Station"
+            }
+          ]
+        }
+      ],
+      "foodItinerary": [
+        {
+          "meal": "Breakfast",
+          "recommendation": "Indori Poha with Jalebi, Samosa, Kachori, Aloo Tikki, Idli, Dosa, Upma. Must-try at Chappan Dukan or local street vendors for authentic taste."
+        },
+        {
+          "meal": "Lunch",
+          "recommendation": "Traditional Malwa Thali (Dal Bafla, Kadhi, Sabzi, Roti), Dal Paniya, North Indian Thali, South Indian meals. Look for local restaurants like Shreemaya, Pishori Dhaba, or Rajhans."
+        },
+        {
+          "meal": "Dinner",
+          "recommendation": "Variety of vegetarian cuisines including North Indian, Punjabi, South Indian, and local Malwa dishes. Sarafa Bazaar for an unparalleled street food dinner experience. Restaurants like Nafees Restaurant (veg options), Mediterra, or The Square (Sayaji Hotel) for a fine dining experience."
+        },
+        {
+          "meal": "Snacks",
+          "recommendation": "Bhutte ka Kees (grated corn preparation), Garadu (fried yam), Pani Puri, Dahi Vada, Sabudana Khichdi, Kulfi, Shikanji (lemonade), various namkeens (savory snacks). Sarafa Bazaar and Chappan Dukan are prime spots for these delights."
+        }
+      ],
+      "famousPlaces": [
+        "Rajwada Palace",
+        "Kanch Mandir",
+        "Lal Bagh Palace",
+        "Sarafa Bazaar",
+        "Chappan Dukan",
+        "Khajrana Ganesh Temple",
+        "Annapurna Temple",
+        "Central Museum (Indore Museum)",
+        "Krishnapura Chhatris",
+        "Pipliyapala Regional Park (ATAL Bihari Vajpayee Regional Park)"
+      ],
+      "dosAndDonts": {
+        "dos": [
+          "Do try the famous street food at Sarafa Bazaar and Chappan Dukan; it's a highlight of Indore.",
+          "Do carry sufficient cash, especially for street food vendors and local markets, as card payments might not always be available.",
+          "Do bargain politely when shopping in local markets; it's a common practice.",
+          "Do respect local customs and traditions, especially when visiting temples and religious sites.",
+          "Do stay hydrated, especially during warmer months, by drinking plenty of water and local beverages like Shikanji.",
+          "Do use ride-sharing apps (Ola/Uber) or auto-rickshaws for convenient and affordable local transport.",
+          "Do learn a few basic Hindi phrases like 'Namaste' (hello) and 'Dhanyawad' (thank you); it can enhance your interaction with locals."
+        ],
+        "donts": [
+          "Don't litter; help keep the city clean by disposing of waste properly.",
+          "Don't consume non-vegetarian food if you are strictly adhering to the 'veg' preference, as some places might have mixed menus (though many pure veg options are available).",
+          "Don't venture into isolated areas late at night, especially if you are unfamiliar with the surroundings.",
+          "Don't over-bargain aggressively; be respectful of vendors and their livelihoods.",
+          "Don't forget to check the opening and closing times of attractions before visiting, as they can vary.",
+          "Don't rely solely on card payments; many smaller shops and street vendors prefer or only accept cash.",
+          "Don't forget to try the local namkeens and sweets as souvenirs."
+        ]
+      }
+    },
+    "timestamp": 1763578333385
+  }
+}

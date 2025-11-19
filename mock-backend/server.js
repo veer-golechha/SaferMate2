@@ -49,8 +49,11 @@ let reportIdCounter = 1;
 app.post('/auth/signup', (req, res) => {
   const { name, email, password, gender, age, country, emergencyContacts, preferences } = req.body;
   
+  console.log('\n📝 SIGNUP REQUEST:', email);
+  
   // Check if user exists
   if (users.find(u => u.email === email)) {
+    console.log('❌ User already exists\n');
     return res.status(400).json({ error: 'User already exists' });
   }
   
@@ -70,6 +73,8 @@ app.post('/auth/signup', (req, res) => {
   
   const token = `mock-token-${user.id}-${Date.now()}`;
   
+  console.log('✅ User created successfully\n');
+  
   res.json({
     success: true,
     user,
@@ -80,13 +85,18 @@ app.post('/auth/signup', (req, res) => {
 app.post('/auth/login', (req, res) => {
   const { email, password } = req.body;
   
+  console.log('\n🔐 LOGIN REQUEST:', email);
+  
   const user = users.find(u => u.email === email);
   
   if (!user) {
+    console.log('❌ Invalid credentials\n');
     return res.status(401).json({ error: 'Invalid credentials' });
   }
   
   const token = `mock-token-${user.id}-${Date.now()}`;
+  
+  console.log('✅ Login successful\n');
   
   res.json({
     success: true,
@@ -99,9 +109,12 @@ app.post('/auth/login', (req, res) => {
 app.put('/auth/profile', (req, res) => {
   const { userId, name, gender, age, country, profileImage, emergencyContacts, preferences } = req.body;
   
+  console.log('\n👤 PROFILE UPDATE REQUEST for user:', userId);
+  
   const userIndex = users.findIndex(u => u.id === userId);
   
   if (userIndex === -1) {
+    console.log('❌ User not found\n');
     return res.status(404).json({ error: 'User not found' });
   }
   
@@ -116,6 +129,8 @@ app.put('/auth/profile', (req, res) => {
     preferences
   };
   
+  console.log('✅ Profile updated successfully\n');
+  
   res.json({
     success: true,
     user: users[userIndex]
@@ -126,7 +141,10 @@ app.put('/auth/profile', (req, res) => {
 app.get('/location/info', async (req, res) => {
   const { query } = req.query;
   
+  console.log('\n🗺️  LOCATION INFO REQUEST:', query);
+  
   if (!query) {
+    console.log('❌ Destination query missing\n');
     return res.status(400).json({ error: 'Destination query is required' });
   }
   
@@ -135,11 +153,13 @@ app.get('/location/info', async (req, res) => {
     
     // Use Gemini if configured, otherwise use mock data
     if (geminiService.isGeminiConfigured()) {
-      console.log(`Fetching location info for "${query}" from Gemini...`);
+      console.log('🤖 Fetching from Gemini AI...');
       data = await geminiService.getLocationInfo(query);
+      console.log('✅ Data retrieved successfully\n');
     } else {
-      console.log(`Using mock data for "${query}"`);
+      console.log('⚠️  Using mock data...');
       data = loadMockData('location-info.json');
+      console.log('✅ Mock data loaded\n');
     }
     
     res.json({
@@ -148,7 +168,7 @@ app.get('/location/info', async (req, res) => {
       data: data
     });
   } catch (error) {
-    console.error('Location info error:', error);
+    console.error('❌ Location info error:', error);
     
     // Return error response instead of falling back to mock data
     res.status(503).json({
@@ -160,23 +180,68 @@ app.get('/location/info', async (req, res) => {
 });
 
 // Trip planner endpoint
-app.post('/trip/generate', (req, res) => {
+app.post('/trip/generate', async (req, res) => {
   const { destination, duration, budget, persons, objective, preferences } = req.body;
-  const tripData = loadMockData('trip-itinerary.json');
   
-  // Customize response based on input
-  tripData.destination = destination;
-  tripData.duration = duration;
+  console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+  console.log('📍 TRIP GENERATION REQUEST');
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+  console.log('Destination:', destination);
+  console.log('Duration:', duration, 'days');
+  console.log('Budget:', `₹${budget}`);
+  console.log('Persons:', persons);
+  console.log('Objective:', objective || 'Not specified');
+  console.log('Food Preference:', preferences?.foodType || 'Not specified');
+  console.log('Languages:', preferences?.languageRanking?.join(', ') || 'Not specified');
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
   
-  res.json({
-    success: true,
-    trip: tripData
-  });
+  try {
+    let tripData;
+    
+    // Use Gemini if configured, otherwise use mock data
+    if (geminiService.isGeminiConfigured()) {
+      console.log('🤖 Using Gemini AI to generate trip itinerary...');
+      tripData = await geminiService.generateTrip(req.body);
+      console.log('✅ Successfully generated trip with Gemini AI\n');
+    } else {
+      console.log('⚠️  Gemini not configured, using mock data...');
+      tripData = loadMockData('trip-itinerary.json');
+      
+      // Customize response based on input
+      tripData.destination = destination;
+      tripData.duration = duration;
+      console.log('✅ Returning mock data\n');
+    }
+    
+    res.json({
+      success: true,
+      trip: tripData
+    });
+  } catch (error) {
+    console.error('❌ Trip generation error:', error);
+    
+    // Fallback to mock data on error
+    console.log('⚠️  Falling back to mock data due to error...\n');
+    const tripData = loadMockData('trip-itinerary.json');
+    tripData.destination = destination;
+    tripData.duration = duration;
+    
+    res.json({
+      success: true,
+      trip: tripData,
+      warning: 'Generated using fallback data due to API error'
+    });
+  }
 });
 
 // Civic Dashboard - Submit report
 app.post('/report/submit', (req, res) => {
   const { photo, location, description, userId } = req.body;
+  
+  console.log('\n📸 CIVIC REPORT SUBMISSION');
+  console.log('User ID:', userId);
+  console.log('Description:', description);
+  console.log('Location:', location);
   
   const report = {
     id: reportIdCounter++,
@@ -189,6 +254,8 @@ app.post('/report/submit', (req, res) => {
   };
   
   reports.push(report);
+  
+  console.log('✅ Report submitted successfully\n');
   
   res.json({
     success: true,

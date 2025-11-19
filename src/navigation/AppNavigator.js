@@ -9,6 +9,8 @@ import OnboardingScreen from '../screens/onboarding/OnboardingScreen';
 import SettingsScreen from '../screens/settings/SettingsScreen';
 import ExploreInputScreen from '../screens/explore/ExploreInputScreen';
 import ExploreResultScreen from '../screens/explore/ExploreResultScreen';
+import TripInputScreen from '../screens/trip/TripInputScreen';
+import TripResultScreen from '../screens/trip/TripResultScreen';
 import MainTabs from './MainTabs';
 
 const Stack = createStackNavigator();
@@ -55,6 +57,16 @@ const AppNavigator = () => {
         <Stack.Screen 
           name="ExploreResult" 
           component={ExploreResultScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="TripInput" 
+          component={TripInputScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="TripResult" 
+          component={TripResultScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

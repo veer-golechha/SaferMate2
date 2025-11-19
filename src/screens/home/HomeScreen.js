@@ -51,6 +51,8 @@ const HomeScreen = ({ navigation }) => {
   const handleQuickAction = (action) => {
     if (action.id === 'explore') {
       navigation.navigate('ExploreInput');
+    } else if (action.id === 'trip') {
+      navigation.navigate('TripInput');
     } else {
       Alert.alert(action.title, `${action.title} screen coming soon!`);
     }

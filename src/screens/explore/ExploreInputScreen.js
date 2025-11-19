@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
-  TextInput,
   TouchableOpacity,
   StyleSheet,
   KeyboardAvoidingView,
@@ -12,6 +11,7 @@ import {
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
 import ApiService from '../../services/api';
+import DestinationAutocomplete from '../../components/DestinationAutocomplete';
 
 const ExploreInputScreen = ({ navigation }) => {
   const [destination, setDestination] = useState('');
@@ -74,16 +74,12 @@ const ExploreInputScreen = ({ navigation }) => {
           Get fun facts, weather updates, and local insights about any destination
         </Text>
 
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="Enter destination (e.g., Mumbai, Delhi, Goa)"
-            value={destination}
-            onChangeText={setDestination}
-            placeholderTextColor={COLORS.textGray}
-            autoCapitalize="words"
-          />
-        </View>
+        <DestinationAutocomplete
+          value={destination}
+          onChangeText={setDestination}
+          placeholder="Enter destination (e.g., Mumbai, Delhi, Goa)"
+          style={styles.inputContainer}
+        />
 
         <TouchableOpacity
           style={[styles.exploreButton, loading && styles.exploreButtonDisabled]}
@@ -175,16 +171,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     marginBottom: 20,
-  },
-  input: {
-    height: 56,
-    backgroundColor: COLORS.backgroundGray,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-    paddingHorizontal: 16,
-    fontSize: 16,
-    color: COLORS.text,
+    zIndex: 1000,
   },
   exploreButton: {
     backgroundColor: COLORS.primary,

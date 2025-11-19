@@ -116,6 +116,16 @@ export const StorageService = {
     }
   },
 
+  async saveTrips(trips) {
+    try {
+      await AsyncStorage.setItem(KEYS.TRIPS, JSON.stringify(trips));
+      return true;
+    } catch (error) {
+      console.error('Error saving trips:', error);
+      return false;
+    }
+  },
+
   // Reports
   async saveReport(report) {
     try {
