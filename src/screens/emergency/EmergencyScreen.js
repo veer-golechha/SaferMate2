@@ -7,12 +7,15 @@ import {
   Alert,
   ActivityIndicator,
   ScrollView,
-  Modal,
   Image,
+  Linking,
 } from 'react-native';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import * as SMS from 'expo-sms';
 import * as Location from 'expo-location';
+import * as FileSystem from 'expo-file-system';
+import * as Sharing from 'expo-sharing';
+import { Asset } from 'expo-asset';
 import { COLORS } from '../../constants/colors';
 import { SURVIVAL_GUIDE_CONTENT } from '../../constants/config';
 import StorageService from '../../services/storage';
@@ -20,7 +23,6 @@ import StorageService from '../../services/storage';
 const EmergencyScreen = () => {
   const navigation = useNavigation();
   const [loading, setLoading] = useState(false);
-  const [showSurvivalGuide, setShowSurvivalGuide] = useState(false);
   const [profileImage, setProfileImage] = useState(null);
 
   useFocusEffect(
@@ -139,8 +141,42 @@ const EmergencyScreen = () => {
     );
   };
 
-  const handleSurvivalGuide = () => {
-    setShowSurvivalGuide(true);
+  const handleSurvivalGuide = async () => {
+    try {
+      setLoading(true);
+      
+      // Load the PDF asset
+      const asset = Asset.fromModule(require('../../../assets/survival_guide.pdf'));
+      await asset.downloadAsync();
+      
+      // Copy to cache directory for sharing
+      const localUri = `${FileSystem.cacheDirectory}survival_guide.pdf`;
+      await FileSystem.copyAsync({
+        from: asset.localUri,
+        to: localUri,
+      });
+      
+      // Check if sharing is available
+      const isAvailable = await Sharing.isAvailableAsync();
+      if (isAvailable) {
+        await Sharing.shareAsync(localUri, {
+          mimeType: 'application/pdf',
+          dialogTitle: 'Survival Guide',
+          UTI: 'com.adobe.pdf',
+        });
+      } else {
+        // Fallback to opening with system viewer
+        await Linking.openURL(localUri);
+      }
+    } catch (error) {
+      console.error('Error opening survival guide:', error);
+      Alert.alert(
+        'Error', 
+        'Failed to open survival guide. Please ensure you have a PDF viewer installed.'
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -210,28 +246,6 @@ const EmergencyScreen = () => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-
-      {/* Survival Guide Modal */}
-      <Modal
-        visible={showSurvivalGuide}
-        animationType="slide"
-        onRequestClose={() => setShowSurvivalGuide(false)}
-      >
-        <View style={styles.modalContainer}>
-          <View style={styles.modalHeader}>
-            <Text style={styles.modalTitle}>📖 Survival Guide</Text>
-            <TouchableOpacity
-              style={styles.closeButton}
-              onPress={() => setShowSurvivalGuide(false)}
-            >
-              <Text style={styles.closeButtonText}>✕</Text>
-            </TouchableOpacity>
-          </View>
-          <ScrollView style={styles.modalContent}>
-            <Text style={styles.guideText}>{SURVIVAL_GUIDE_CONTENT}</Text>
-          </ScrollView>
-        </View>
-      </Modal>
     </View>
   );
 };
@@ -361,46 +375,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: COLORS.textGray,
     textAlign: 'center',
-  },
-  modalContainer: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-  },
-  modalHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingTop: 50,
-    paddingBottom: 20,
-    backgroundColor: COLORS.primary,
-  },
-  modalTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#FFFFFF',
-  },
-  closeButton: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  closeButtonText: {
-    fontSize: 24,
-    color: '#FFFFFF',
-    fontWeight: 'bold',
-  },
-  modalContent: {
-    flex: 1,
-    padding: 20,
-  },
-  guideText: {
-    fontSize: 14,
-    color: COLORS.text,
-    lineHeight: 24,
   },
 });
 
