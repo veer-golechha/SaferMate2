@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Alert,
+  Image,
 } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { COLORS } from '../../constants/colors';
@@ -15,12 +16,25 @@ import StorageService from '../../services/storage';
 const TripHistoryScreen = ({ navigation }) => {
   const [trips, setTrips] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [profileImage, setProfileImage] = useState(null);
 
   useFocusEffect(
     React.useCallback(() => {
       loadTrips();
+      loadUserProfile();
     }, [])
   );
+
+  const loadUserProfile = async () => {
+    try {
+      const userData = await StorageService.getUserData();
+      if (userData?.profileImage) {
+        setProfileImage(userData.profileImage);
+      }
+    } catch (error) {
+      console.error('[TRIP-HISTORY] Error loading user profile:', error);
+    }
+  };
 
   const loadTrips = async () => {
     setLoading(true);
@@ -210,10 +224,24 @@ const TripHistoryScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Trip History</Text>
-        <Text style={styles.headerSubtitle}>
-          {trips.length} {trips.length === 1 ? 'trip' : 'trips'} saved
-        </Text>
+        <View style={styles.headerContent}>
+          <View style={styles.headerTextContainer}>
+            <Text style={styles.headerTitle}>Trip History</Text>
+            <Text style={styles.headerSubtitle}>
+              {trips.length} {trips.length === 1 ? 'trip' : 'trips'} saved
+            </Text>
+          </View>
+          <TouchableOpacity
+            style={styles.profileButton}
+            onPress={() => navigation.navigate('Settings')}
+          >
+            {profileImage ? (
+              <Image source={{ uri: profileImage }} style={styles.profileImage} />
+            ) : (
+              <Text style={styles.profileIcon}>👤</Text>
+            )}
+          </TouchableOpacity>
+        </View>
       </View>
 
       <FlatList
@@ -250,6 +278,14 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 8,
   },
+  headerContent: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  headerTextContainer: {
+    flex: 1,
+  },
   headerTitle: {
     fontSize: 28,
     fontWeight: 'bold',
@@ -260,6 +296,22 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#FFFFFF',
     opacity: 0.9,
+  },
+  profileButton: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  profileImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+  },
+  profileIcon: {
+    fontSize: 28,
   },
   listContainer: {
     padding: 16,

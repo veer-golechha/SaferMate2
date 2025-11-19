@@ -29,14 +29,11 @@ const CivicTrackScreen = ({ navigation }) => {
     try {
       const savedReports = await StorageService.getReports();
       
-      // Add mock status to reports (simulating backend response)
-      const reportsWithStatus = savedReports.map((report, index) => {
-        const statuses = ['Submitted', 'In Review', 'Resolved'];
-        const randomStatus = statuses[index % statuses.length];
-        
+      // Add status as 'Submitted' to all reports
+      const reportsWithStatus = savedReports.map((report) => {
         return {
           ...report,
-          status: report.status || randomStatus,
+          status: 'Submitted',
           id: report.localId,
         };
       }).reverse(); // Show newest first
@@ -56,29 +53,11 @@ const CivicTrackScreen = ({ navigation }) => {
   }, []);
 
   const getStatusColor = (status) => {
-    switch (status) {
-      case 'Submitted':
-        return '#FFA500';
-      case 'In Review':
-        return '#2196F3';
-      case 'Resolved':
-        return '#4CAF50';
-      default:
-        return COLORS.textGray;
-    }
+    return '#FFA500'; // Orange for Submitted
   };
 
   const getStatusIcon = (status) => {
-    switch (status) {
-      case 'Submitted':
-        return '📝';
-      case 'In Review':
-        return '🔍';
-      case 'Resolved':
-        return '✅';
-      default:
-        return '📋';
-    }
+    return '📝'; // Icon for Submitted
   };
 
   const formatDate = (dateString) => {

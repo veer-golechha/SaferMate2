@@ -17,10 +17,18 @@ const CivicDashboardScreen = ({ navigation }) => {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Civic Dashboard</Text>
-        <Text style={styles.headerSubtitle}>
-          Report issues and track their status
-        </Text>
+        <TouchableOpacity
+          style={styles.backButton}
+          onPress={() => navigation.goBack()}
+        >
+          <Text style={styles.backButtonText}>←</Text>
+        </TouchableOpacity>
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.headerTitle}>Civic Dashboard</Text>
+          <Text style={styles.headerSubtitle}>
+            Report issues and track their status
+          </Text>
+        </View>
       </View>
 
       {/* Tab Selector */}
@@ -129,11 +137,28 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.15,
     shadowRadius: 6,
     elevation: 8,
+  },
+  backButton: {
+    width: 40,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 8,
+  },
+  backButtonText: {
+    fontSize: 28,
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+  },
+  headerTextContainer: {
+    flex: 1,
   },
   headerTitle: {
     fontSize: 28,
