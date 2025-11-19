@@ -43,6 +43,22 @@ const SettingsScreen = ({ navigation }) => {
   
   const [errors, setErrors] = useState({});
 
+  // Language selection helper
+  const toggleLanguage = (languageCode) => {
+    if (languageRanking.includes(languageCode)) {
+      // Deselect: remove from array
+      setLanguageRanking(languageRanking.filter(code => code !== languageCode));
+    } else {
+      // Select: add to end of array (maintains selection order)
+      setLanguageRanking([...languageRanking, languageCode]);
+    }
+  };
+
+  const getLanguagePosition = (languageCode) => {
+    const index = languageRanking.indexOf(languageCode);
+    return index !== -1 ? index + 1 : null;
+  };
+
   useEffect(() => {
     loadUserData();
   }, []);
@@ -412,11 +428,47 @@ const SettingsScreen = ({ navigation }) => {
         <View style={styles.inputContainer}>
           <Text style={styles.label}>Preferred Languages</Text>
           <Text style={styles.helperText}>
-            Selected: {languageRanking.map(code => {
-              const lang = LANGUAGES.find(l => l.code === code);
-              return lang?.name;
-            }).filter(Boolean).join(', ')}
+            Tap languages to select/deselect. Order matters for translations.
           </Text>
+          
+          {/* Language chips */}
+          <View style={styles.languageChipsContainer}>
+            {LANGUAGES.map((language) => {
+              const position = getLanguagePosition(language.code);
+              const isSelected = position !== null;
+              
+              return (
+                <TouchableOpacity
+                  key={language.code}
+                  style={[
+                    styles.languageChip,
+                    isSelected && styles.languageChipSelected
+                  ]}
+                  onPress={() => toggleLanguage(language.code)}
+                >
+                  <Text style={[
+                    styles.languageChipText,
+                    isSelected && styles.languageChipTextSelected
+                  ]}>
+                    {language.name} {isSelected && `(${position})`}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+          
+          {/* Selected languages summary */}
+          {languageRanking.length > 0 && (
+            <View style={styles.selectedLanguagesContainer}>
+              <Text style={styles.selectedLanguagesLabel}>Selection order:</Text>
+              <Text style={styles.selectedLanguagesText}>
+                {languageRanking.map((code, index) => {
+                  const lang = LANGUAGES.find(l => l.code === code);
+                  return lang?.name;
+                }).filter(Boolean).join(' → ')}
+              </Text>
+            </View>
+          )}
         </View>
       </View>
 
@@ -628,6 +680,53 @@ const styles = StyleSheet.create({
     color: COLORS.danger,
     fontSize: 16,
     fontWeight: '600',
+  },
+  languageChipsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: 12,
+    gap: 8,
+  },
+  languageChip: {
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: 20,
+    backgroundColor: COLORS.backgroundGray,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    marginBottom: 4,
+  },
+  languageChipSelected: {
+    backgroundColor: COLORS.primary,
+    borderColor: COLORS.primary,
+  },
+  languageChipText: {
+    fontSize: 14,
+    color: COLORS.text,
+    fontWeight: '500',
+  },
+  languageChipTextSelected: {
+    color: '#FFFFFF',
+    fontWeight: '600',
+  },
+  selectedLanguagesContainer: {
+    marginTop: 16,
+    padding: 12,
+    backgroundColor: COLORS.backgroundLight,
+    borderRadius: 8,
+    borderLeftWidth: 3,
+    borderLeftColor: COLORS.primary,
+  },
+  selectedLanguagesLabel: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: COLORS.textGray,
+    marginBottom: 4,
+  },
+  selectedLanguagesText: {
+    fontSize: 14,
+    color: COLORS.text,
+    fontWeight: '500',
   },
 });
 
