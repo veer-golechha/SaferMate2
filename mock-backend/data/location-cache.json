@@ -29,7 +29,7 @@
       "aqi": 90,
       "civicMetric": 4.3
     },
-    "timestamp": 1763300470312
+    "timestamp": 1763568563183
   },
   "banglore": {
     "data": {
@@ -126,5 +126,133 @@
       "civicMetric": 3.8
     },
     "timestamp": 1763529935947
+  },
+  "kerala": {
+    "data": {
+      "funFacts": [
+        "Kerala is famously known as 'God's Own Country' due to its lush landscapes, serene backwaters, and pristine beaches.",
+        "It boasts the highest literacy rate in India, consistently achieving over 90% literacy, reflecting its strong emphasis on education.",
+        "The state is home to a unique backwater ecosystem, a network of interconnected canals, lakes, and rivers, famous for its traditional houseboats (kettuvallams).",
+        "Kerala is a global hub for Ayurveda, the ancient Indian system of medicine, offering numerous wellness and rejuvenation centers.",
+        "It is the birthplace of Kathakali, a highly stylized classical Indian dance-drama characterized by elaborate makeup, costumes, and intricate hand gestures."
+      ],
+      "famousFoods": [
+        "Appam with Stew - Soft, lacy, fermented rice pancakes served with a mild, coconut milk-based stew, often with chicken, mutton, or vegetables.",
+        "Puttu and Kadala Curry - Steamed cylinders of ground rice layered with grated coconut, typically served with a spicy black chickpea curry.",
+        "Kerala Fish Curry (Meen Curry) - A tangy and spicy fish curry made with coconut milk, kokum (Malabar tamarind), and a blend of aromatic spices.",
+        "Sadya - A traditional vegetarian feast served on a banana leaf, comprising numerous dishes like rice, sambar, avial, thoran, pachadi, and payasam, especially popular during festivals like Onam.",
+        "Karimeen Pollichathu - Pearl spot fish marinated in spices, wrapped in a banana leaf, and then grilled or pan-fried, resulting in a flavorful and aromatic dish."
+      ],
+      "famousPlaces": [
+        "Alleppey (Alappuzha) Backwaters - A serene network of canals, lakes, and lagoons, famous for its houseboat cruises offering a unique glimpse into rural Kerala life.",
+        "Munnar - A picturesque hill station renowned for its sprawling tea plantations, mist-covered mountains, waterfalls, and cool climate, ideal for nature lovers.",
+        "Kochi (Cochin) - A historic port city blending colonial architecture, Chinese fishing nets, Jewish synagogues, and modern vibrancy, offering a rich cultural tapestry.",
+        "Thekkady (Periyar Wildlife Sanctuary) - A renowned wildlife reserve famous for its elephant herds, tigers, and boat safaris on Periyar Lake, providing opportunities for wildlife viewing.",
+        "Kovalam Beach - A popular crescent-shaped beach known for its shallow waters, lighthouse, and various water sports, making it a favorite spot for sunbathing and relaxation."
+      ],
+      "weather": {
+        "temperature": 27,
+        "condition": "Tropical monsoon climate with high humidity, distinct wet and dry seasons, and moderate temperatures year-round."
+      },
+      "aqi": 65,
+      "civicMetric": 4.1
+    },
+    "timestamp": 1763568406315
+  },
+  "delhi": {
+    "data": {
+      "funFacts": [
+        "Delhi has been continuously inhabited since the 6th century BCE and has served as the capital of various empires and kingdoms, leading to it being called 'the city of cities'.",
+        "The Iron Pillar of Delhi, located within the Qutub Minar complex, is famous for its rust-resistant composition, despite being over 1,600 years old.",
+        "Delhi is home to three UNESCO World Heritage Sites: Humayun's Tomb, Qutub Minar, and Red Fort.",
+        "The Delhi Metro is one of the largest and busiest metro networks in the world, serving millions of commuters daily.",
+        "Connaught Place, a prominent financial and commercial hub, is one of the largest circular market areas in India, designed in a Georgian style."
+      ],
+      "famousFoods": [
+        "Butter Chicken - A rich and creamy chicken curry cooked in a tomato and butter-based gravy, a global favorite originating from Delhi.",
+        "Chole Bhature - A popular breakfast or lunch dish consisting of spicy chickpea curry (chole) served with fluffy, deep-fried bread (bhature).",
+        "Parathas (from Parathe Wali Gali) - Stuffed flatbreads with various fillings like potato, paneer, cauliflower, or radish, typically served with pickles and chutneys.",
+        "Gol Gappe / Pani Puri - Crispy hollow puris filled with spiced mashed potatoes or chickpeas, dipped in tangy, spicy flavored water.",
+        "Kebabs - A wide variety of grilled or roasted meat (chicken, mutton) or paneer pieces, marinated in spices, especially famous from Old Delhi's street food scene."
+      ],
+      "famousPlaces": [
+        "Red Fort - A magnificent 17th-century fort built by Mughal emperor Shah Jahan, known for its stunning red sandstone architecture and historical significance.",
+        "Qutub Minar - A UNESCO World Heritage Site, this 73-meter tall brick minaret is a striking example of Indo-Islamic architecture, surrounded by several other ancient monuments.",
+        "India Gate - A prominent war memorial and iconic landmark, commemorating Indian soldiers who died in World War I, often compared to the Arc de Triomphe.",
+        "Humayun's Tomb - Another UNESCO World Heritage Site, this grand tomb is a precursor to the Taj Mahal, showcasing early Mughal architecture with beautiful gardens.",
+        "Lotus Temple - A Baháʼí House of Worship renowned for its distinctive lotus-flower-like shape, open to people of all faiths and known for its serene ambiance."
+      ],
+      "weather": {
+        "temperature": 25,
+        "condition": "Extreme, with hot and dry summers, mild to cool and foggy winters, and a monsoon season."
+      },
+      "aqi": 250,
+      "civicMetric": 3.8
+    },
+    "timestamp": 1763568530924
+  },
+  "jaipur": {
+    "data": {
+      "funFacts": [
+        "Jaipur is famously known as the 'Pink City' because of the distinctive pink color of its buildings, painted in 1876 to welcome Prince Albert.",
+        "It was India's first planned city, designed by Vidyadhar Bhattacharya based on the principles of Vastu Shastra and Shilpa Shastra.",
+        "The city is a UNESCO World Heritage Site, recognized for its unique urban planning and architectural grandeur.",
+        "Jaipur is home to Jantar Mantar, a UNESCO-listed astronomical observatory featuring the world's largest stone sundial.",
+        "It is a major hub for gemstones and jewelry, particularly known for its exquisite Kundan and Meenakari work."
+      ],
+      "famousFoods": [
+        "Dal Baati Churma - A quintessential Rajasthani dish consisting of baked wheat balls (baati), a lentil curry (dal), and a sweet crumbled wheat preparation (churma).",
+        "Ghewar - A traditional disc-shaped sweet cake made from flour, soaked in sugar syrup, and often topped with rabri, nuts, or mawa.",
+        "Laal Maas - A fiery and rich mutton curry, famous for its vibrant red color derived from Mathania chilies and its intense spicy flavor.",
+        "Pyaaz Kachori - A popular deep-fried, flaky pastry filled with a spicy and tangy mixture of onions, potatoes, and spices, often served with chutney.",
+        "Mirchi Bada - Large green chili fritters, where a big chili is stuffed with a spicy potato filling, battered, and deep-fried, a popular street food snack."
+      ],
+      "famousPlaces": [
+        "Hawa Mahal - The 'Palace of Winds,' an iconic five-story palace with 953 small windows (jharokhas) designed to allow royal ladies to observe street festivals without being seen.",
+        "Amber Fort (Amer Fort) - A majestic hill fort known for its artistic Hindu style elements, grand courtyards, palaces, and the stunning Sheesh Mahal (Mirror Palace).",
+        "City Palace - A sprawling complex of palaces, courtyards, gardens, and museums, still partly home to the royal family of Jaipur, showcasing a blend of Rajput and Mughal architecture.",
+        "Jantar Mantar - A UNESCO World Heritage site, this astronomical observatory built by Maharaja Sawai Jai Singh II features 19 large instruments for measuring time, predicting eclipses, and tracking celestial bodies.",
+        "Nahargarh Fort - Perched on the Aravalli hills overlooking Jaipur, this fort offers breathtaking panoramic views of the city, especially beautiful during sunset, and houses the Madhavendra Bhawan."
+      ],
+      "weather": {
+        "temperature": 26,
+        "condition": "Hot and dry, especially in summer; pleasant and mild winters."
+      },
+      "aqi": 185,
+      "civicMetric": 3.8
+    },
+    "timestamp": 1763568774148
+  },
+  "mumbai": {
+    "data": {
+      "funFacts": [
+        "Mumbai was originally an archipelago of seven islands, which were gradually reclaimed to form the present-day city.",
+        "It is the financial capital of India, home to major financial institutions like the Reserve Bank of India and the Bombay Stock Exchange.",
+        "Mumbai is the birthplace of Bollywood, the largest film industry in the world by number of films produced.",
+        "The city's Dabbawalas (lunchbox deliverymen) are famous for their incredibly efficient and accurate delivery system, with a near-perfect success rate.",
+        "The Chhatrapati Shivaji Maharaj Terminus (CSMT) is a UNESCO World Heritage site and a magnificent example of Victorian Gothic Revival architecture in India."
+      ],
+      "famousFoods": [
+        "Vada Pav - An iconic street food consisting of a deep-fried potato patty (vada) served in a soft bread bun (pav) with various chutneys.",
+        "Pav Bhaji - A spicy and flavorful mashed vegetable curry cooked with butter and served with soft, buttered pav (bread rolls).",
+        "Pani Puri - Hollow, crispy puris filled with a mixture of spiced potatoes, chickpeas, and a tangy, spicy tamarind water.",
+        "Bhel Puri - A savory snack made from puffed rice, finely chopped vegetables, and a tangy tamarind sauce, often topped with sev.",
+        "Misal Pav - A spicy curry made from sprouted lentils, topped with farsan (crispy fried snack), chopped onions, and served with pav."
+      ],
+      "famousPlaces": [
+        "Gateway of India - An iconic arch monument built to commemorate the visit of King George V and Queen Mary, overlooking the Arabian Sea.",
+        "Marine Drive (Queen's Necklace) - A 3.6 km long promenade along the Arabian Sea, famous for its C-shaped view and the sparkling streetlights at night.",
+        "Chhatrapati Shivaji Maharaj Terminus (CSMT) - A historic railway station and UNESCO World Heritage site, renowned for its stunning Victorian Gothic architecture.",
+        "Elephanta Caves - A UNESCO World Heritage site, these ancient cave temples on Elephanta Island are dedicated primarily to the Hindu god Shiva.",
+        "Haji Ali Dargah - A beautiful mosque and tomb located on an islet off the coast of Worli, accessible only during low tide via a narrow causeway."
+      ],
+      "weather": {
+        "temperature": 27,
+        "condition": "Warm and humid, with a distinct monsoon season from June to September."
+      },
+      "aqi": 120,
+      "civicMetric": 3.5
+    },
+    "timestamp": 1763568807322
   }
 }

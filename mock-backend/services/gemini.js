@@ -119,45 +119,71 @@ const getLocationInfo = async (destination) => {
 
 Provide ONLY the JSON response, no additional text.`;
 
-  try {
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
-    
-    // Clean the response and parse JSON
-    let jsonText = text.trim();
-    
-    // Remove markdown code blocks if present
-    if (jsonText.startsWith('```json')) {
-      jsonText = jsonText.replace(/```json\n?/g, '').replace(/```\n?/g, '');
-    } else if (jsonText.startsWith('```')) {
-      jsonText = jsonText.replace(/```\n?/g, '');
+  // Retry logic with exponential backoff
+  const maxRetries = 3;
+  let lastError;
+  
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      console.log(`Attempt ${attempt}/${maxRetries} to fetch data for "${destination}"...`);
+      
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const text = response.text();
+      
+      // Clean the response and parse JSON
+      let jsonText = text.trim();
+      
+      // Remove markdown code blocks if present
+      if (jsonText.startsWith('```json')) {
+        jsonText = jsonText.replace(/```json\n?/g, '').replace(/```\n?/g, '');
+      } else if (jsonText.startsWith('```')) {
+        jsonText = jsonText.replace(/```\n?/g, '');
+      }
+      
+      const data = JSON.parse(jsonText);
+      
+      // Cache the result with current timestamp
+      locationCache.set(cacheKey, {
+        data: data,
+        timestamp: Date.now()
+      });
+      console.log(`✓ Successfully cached fresh data for "${destination}"`);
+      
+      // Save cache to file
+      saveCacheToFile();
+      
+      return data;
+    } catch (error) {
+      lastError = error;
+      
+      // Check if it's a rate limit or overload error (503, 429)
+      if (error.status === 503 || error.status === 429) {
+        console.log(`⚠ Server overloaded (attempt ${attempt}/${maxRetries}). Retrying in ${attempt * 2}s...`);
+        
+        // Wait before retrying (exponential backoff: 2s, 4s, 6s)
+        if (attempt < maxRetries) {
+          await new Promise(resolve => setTimeout(resolve, attempt * 2000));
+          continue;
+        }
+      }
+      
+      // For other errors or final attempt, break the loop
+      console.error('Gemini API error:', error.message || error);
+      break;
     }
-    
-    const data = JSON.parse(jsonText);
-    
-    // Cache the result with current timestamp
-    locationCache.set(cacheKey, {
-      data: data,
-      timestamp: Date.now()
-    });
-    console.log(`Cached fresh data for "${destination}"`);
-    
-    // Save cache to file
-    saveCacheToFile();
-    
-    return data;
-  } catch (error) {
-    console.error('Gemini API error:', error);
-    
-    // Check if we have expired cache data as fallback
-    if (locationCache.has(cacheKey)) {
-      console.log(`Using expired cache data for "${destination}" as fallback`);
-      return locationCache.get(cacheKey).data;
-    }
-    
-    throw error;
   }
+  
+  // All retries failed, check for fallback cache
+  if (locationCache.has(cacheKey)) {
+    const cached = locationCache.get(cacheKey);
+    const ageHours = Math.round((Date.now() - cached.timestamp) / 3600000);
+    console.log(`⚠ Using expired cache data for "${destination}" (${ageHours}h old) as fallback`);
+    return cached.data;
+  }
+  
+  // No cache available, throw the error
+  throw lastError;
 };
 
 module.exports = {
