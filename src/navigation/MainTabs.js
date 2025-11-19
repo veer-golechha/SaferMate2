@@ -5,6 +5,7 @@ import { COLORS } from '../constants/colors';
 
 import HomeScreen from '../screens/home/HomeScreen';
 import TripHistoryScreen from '../screens/trips/TripHistoryScreen';
+import ChatroomScreen from '../screens/chatroom/ChatroomScreen';
 import EmergencyScreen from '../screens/emergency/EmergencyScreen';
 
 const Tab = createBottomTabNavigator();
@@ -42,6 +43,15 @@ const MainTabs = () => {
         options={{
           tabBarIcon: ({ color, size }) => (
             <Text style={{ fontSize: 24 }}>✈️</Text>
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Chatroom"
+        component={ChatroomScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Text style={{ fontSize: 24 }}>💬</Text>
           ),
         }}
       />
