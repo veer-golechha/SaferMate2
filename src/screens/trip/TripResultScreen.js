@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   StyleSheet,
   ScrollView,
   Alert,
+  BackHandler,
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
 
@@ -13,6 +14,16 @@ const TripResultScreen = ({ navigation, route }) => {
   const { tripData } = route.params;
   const [expandedDays, setExpandedDays] = useState({});
   const [downloading, setDownloading] = useState(false);
+
+  // Handle Android hardware back button - navigate to Home tab
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      navigation.navigate('MainApp', { screen: 'Home' });
+      return true; // Prevent default behavior
+    });
+
+    return () => backHandler.remove();
+  }, [navigation]);
 
   const toggleDay = (day) => {
     setExpandedDays(prev => ({
