@@ -114,7 +114,13 @@ const SettingsScreen = ({ navigation }) => {
       });
 
       if (!result.canceled) {
-        setProfileImage(result.assets[0].uri);
+        // Save to persistent storage
+        const persistentPath = await StorageService.saveImagePersistently(result.assets[0].uri, 'profile');
+        if (persistentPath) {
+          setProfileImage(persistentPath);
+        } else {
+          Alert.alert('Error', 'Failed to save image');
+        }
       }
     } catch (error) {
       Alert.alert('Error', 'Failed to pick image');
@@ -137,7 +143,13 @@ const SettingsScreen = ({ navigation }) => {
       });
 
       if (!result.canceled) {
-        setProfileImage(result.assets[0].uri);
+        // Save to persistent storage
+        const persistentPath = await StorageService.saveImagePersistently(result.assets[0].uri, 'profile');
+        if (persistentPath) {
+          setProfileImage(persistentPath);
+        } else {
+          Alert.alert('Error', 'Failed to save image');
+        }
       }
     } catch (error) {
       Alert.alert('Error', 'Failed to take photo');

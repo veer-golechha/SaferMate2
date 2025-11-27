@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as FileSystem from 'expo-file-system';
 
 const KEYS = {
   AUTH_TOKEN: '@safarmate_auth_token',
@@ -8,7 +9,58 @@ const KEYS = {
   REPORTS: '@safarmate_reports',
 };
 
+// Directory for persistent images
+const IMAGE_DIR = `${FileSystem.documentDirectory}images/`;
+
 export const StorageService = {
+  // Ensure image directory exists
+  async ensureImageDir() {
+    const dirInfo = await FileSystem.getInfoAsync(IMAGE_DIR);
+    if (!dirInfo.exists) {
+      await FileSystem.makeDirectoryAsync(IMAGE_DIR, { intermediates: true });
+    }
+  },
+
+  // Image Helper - Save image to persistent storage and return path
+  async saveImagePersistently(uri, prefix = 'img') {
+    try {
+      if (!uri) return null;
+      
+      // If already in our document directory, return as is
+      if (uri.startsWith(FileSystem.documentDirectory)) {
+        return uri;
+      }
+
+      await this.ensureImageDir();
+      
+      // Generate unique filename
+      const filename = `${prefix}_${Date.now()}.jpg`;
+      const destPath = `${IMAGE_DIR}${filename}`;
+      
+      // Copy file to persistent storage
+      await FileSystem.copyAsync({
+        from: uri,
+        to: destPath,
+      });
+      
+      return destPath;
+    } catch (error) {
+      console.error('Error saving image persistently:', error);
+      return null;
+    }
+  },
+
+  // Delete a persisted image
+  async deleteImage(uri) {
+    try {
+      if (uri && uri.startsWith(IMAGE_DIR)) {
+        await FileSystem.deleteAsync(uri, { idempotent: true });
+      }
+    } catch (error) {
+      console.error('Error deleting image:', error);
+    }
+  },
+
   // Auth Token
   async saveAuthToken(token) {
     try {

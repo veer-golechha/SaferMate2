@@ -56,9 +56,15 @@ const CivicReportScreen = ({ navigation }) => {
       });
 
       if (!result.canceled) {
-        setImageUri(result.assets[0].uri);
-        // Auto-capture location when image is taken
-        captureLocation();
+        // Save to persistent storage
+        const persistentPath = await StorageService.saveImagePersistently(result.assets[0].uri, 'report');
+        if (persistentPath) {
+          setImageUri(persistentPath);
+          // Auto-capture location when image is taken
+          captureLocation();
+        } else {
+          Alert.alert('Error', 'Failed to save image');
+        }
       }
     } catch (error) {
       console.error('Error capturing image:', error);
@@ -76,9 +82,15 @@ const CivicReportScreen = ({ navigation }) => {
       });
 
       if (!result.canceled) {
-        setImageUri(result.assets[0].uri);
-        // Prompt to capture location
-        captureLocation();
+        // Save to persistent storage
+        const persistentPath = await StorageService.saveImagePersistently(result.assets[0].uri, 'report');
+        if (persistentPath) {
+          setImageUri(persistentPath);
+          // Prompt to capture location
+          captureLocation();
+        } else {
+          Alert.alert('Error', 'Failed to save image');
+        }
       }
     } catch (error) {
       console.error('Error picking image:', error);
