@@ -46,6 +46,7 @@
     "babel-preset-expo": "^54.0.7",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
+    "expo-module-scripts": "^5.0.7",
     "express": "^5.1.0",
     "nodemon": "^3.1.11"
   }

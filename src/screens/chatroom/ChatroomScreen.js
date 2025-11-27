@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { View, StyleSheet, ActivityIndicator, Linking } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { COLORS } from '../../constants/colors';
-
-const CHATROOM_URL = 'http://54.90.108.66/';
+import { CHATROOM_URL } from '../../constants/config';
 
 const ChatroomScreen = ({ navigation }) => {
   useFocusEffect(

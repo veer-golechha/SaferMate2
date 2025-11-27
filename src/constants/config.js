@@ -1,7 +1,20 @@
 import { Platform } from 'react-native';
 import Constants from 'expo-constants';
 
+// ============================================
+// EXTERNAL SERVICES CONFIGURATION
+// ============================================
+// Change these values to configure external services
+
+// Chatroom URL - Set your chatroom server IP/URL here
+export const CHATROOM_URL = 'http://142.250.183.238/';
+
+// Survival Guide PDF URL (if hosted externally)
+export const SURVIVAL_GUIDE_URL = null; // Set to URL if hosted externally, null to use bundled PDF
+
+// ============================================
 // API Configuration - Automatically detects your computer's IP
+// ============================================
 const getComputerIP = () => {
   // Get the manifest extra from Expo
   const manifest = Constants.expoConfig;
